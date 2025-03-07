@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>姜胡说直播2025.03.06 - 互联网与AI创富指南</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #e74c3c;
+            --dark: #34495e;
+            --light: #ecf0f1;
+            --warning: #f39c12;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin: 15px 0 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .module {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+        }
+        
+        .module.history::before {
+            background-color: var(--primary);
+        }
+        
+        .module.ai::before {
+            background-color: var(--secondary);
+        }
+        
+        .module.startup::before {
+            background-color: var(--accent);
+        }
+        
+        .module.pitfall::before {
+            background-color: var(--warning);
+        }
+        
+        .module.trivia::before {
+            background-color: var(--dark);
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .data-point {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .case {
+            background-color: rgba(46, 204, 113, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            fill: currentColor;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+        
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 50px;
+            margin-right: 5px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            margin: 15px 0;
+        }
+        
+        .formula {
+            font-style: italic;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(52, 73, 94, 0.1);
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>姜胡说直播2025.03.06</h1>
+            <div class="subtitle">互联网与AI创富指南</div>
+            <a href="https://h0nvycm1fg.feishu.cn/wiki/OIQMwvHR2i46FckYUKDcIkvNnje" class="btn">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                </svg>
+                查看详细分析
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="module history">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3Z"></path>
+                </svg>
+                上古互联网考古
+            </h2>
+            
+            <h3>瀛海威：中国互联网起点（1995）</h3>
+            
+            <div class="highlight">
+                <strong>震撼数据：</strong>
+                <p>电脑价格 ≈ <span class="data-point">现在10万元</span> | 全国网民 < <span class="data-point">10万人</span></p>
+            </div>
+            
+            <div class="case">
+                <strong>作死操作：</strong>
+                <ul>
+                    <li>员工没见过鼠标</li>
+                    <li>网购要银行汇款3天</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <strong>血泪段子：</strong>
+                <p>沈阳小伙为省电话费，用公司专线谈恋爱被写进央视新闻</p>
+            </div>
+        </div>
+        
+        <div class="module ai">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M21,15.61L19.59,17L14.58,12L19.59,7L21,8.39L17.44,12L21,15.61M3,6H16V8H3V6M3,13V11H13V13H3M3,18V16H16V18H3Z"></path>
+                </svg>
+                AI时代搞钱实操
+            </h2>
+            
+            <h3>2025爆款工具Manus</h3>
+            
+            <div class="highlight">
+                <strong>核心功能：</strong>
+                <ul>
+                    <li>老板说"去上海"→自动订20人机票酒店</li>
+                    <li>模仿巴菲特买股票</li>
+                </ul>
+            </div>
+            
+            <div class="case">
+                <strong>捡钱路径：</strong>
+                <ul>
+                    <li>内测号黑市 <span class="data-point">10万/个</span></li>
+                    <li>教小老板用AI管排班（<span class="data-point">5000元/人</span>）</li>
+                </ul>
+            </div>
+            
+            <h3>国产AI神器DeepSeek</h3>
+            
+            <div class="highlight">
+                <strong>下沉市场杀手：</strong>
+                <ul>
+                    <li>插电即用 | 小工厂主怕泄密狂买</li>
+                </ul>
+            </div>
+            
+            <div class="case">
+                <strong>倒爷公式：</strong>
+                <p>一线<span class="data-point">1万</span>进货→三线<span class="data-point">1.5万</span>卖出（月赚50台=<span class="data-point">25万</span>）</p>
+            </div>
+        </div>
+        
+        <div class="module startup">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                </svg>
+                零成本创业三板斧
+            </h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>案例</th>
+                        <th>月利润</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">信息差</span></td>
+                        <td>教老人穿汉服走秀卖衣服</td>
+                        <td class="data-point">3万+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">认知差</span></td>
+                        <td>AI写简历卖给留学生</td>
+                        <td class="data-point">5万+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">行动差</span></td>
+                        <td>蹭热点卖教程（如Manus）</td>
+                        <td class="data-point">2万+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="module pitfall">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"></path>
+                </svg>
+                血泪避坑指南
+            </h2>
+            
+            <h3>经典翻车现场</h3>
+            
+            <div class="highlight">
+                <ul>
+                    <li><strong>1999年：</strong>看不上hao123导航站→错失<span class="data-point">5000万</span>收购</li>
+                    <li><strong>2023年：</strong>跟风买元宇宙股票→血亏<span class="data-point">60%</span>本金</li>
+                </ul>
+            </div>
+            
+            <h3>复活指南</h3>
+            
+            <div class="case">
+                <ul>
+                    <li>用AI读财报找"闷声发财"公司（如卖螺丝的）</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <strong>每天灵魂三问：</strong>
+                <ol>
+                    <li>这事十年前有人做成过吗？</li>
+                    <li>我能比同行快几步？</li>
+                    <li>亏多少我会跑路？</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="module trivia">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M11,7H13V9H11V7M11,11H13V17H11V11Z"></path>
+                </svg>
+                冷知识彩蛋
+            </h2>
+            
+            <h3>睡眠黑客</h3>
+            
+            <div class="highlight">
+                <strong>自杀式作息：</strong>
+                <p>达芬奇睡眠法（每4小时睡20分钟）→<span class="data-point">三天进急诊</span></p>
+            </div>
+            
+            <div class="case">
+                <strong>科学版：</strong>
+                <p>6小时+午休20分钟（定闹钟！）</p>
+            </div>
+            
+            <h3>防爸妈被骗</h3>
+            
+            <div class="highlight">
+                <strong>最新骗局：</strong>
+                <p>直播间"高僧开光"手串（<span class="data-point">9.9→999元</span>）</p>
+            </div>
+            
+            <div class="case">
+                <strong>破解大招：</strong>
+                <p>教他们用AI拍照查价</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3>30年互联网生存法则</h3>
+            <p>所有赚大钱的事，本质都是"合法抄作业"</p>
+            
+            <div class="formula">
+                AI时代新公式：信息差 × 行动速度³
+            </div>
+            
+            <p>规避风险的最好方法——先亏小钱</p>
+        </div>
+    </footer>
+</body>
+</html>
