@@ -1,1 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新材料行业发展知识图解</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* 颜色系统 */
+            --bg-deep: #121212;
+            --bg-card: #1E1E1E;
+            --bg-card-hover: #252525;
+            --primary: #8C52FF;
+            --primary-dark: #6E3AD9;
+            --primary-light: #A875FF;
+            --neon-pink: #FF2E93;
+            --neon-blue: #00E9FF;
+            --neon-green: #00FF85;
+            --neon-yellow: #FFDE59;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-tertiary: rgba(255, 255, 255, 0.5);
+            --text-disabled: rgba(255, 255, 255, 0.3);
+            --border-light: rgba(255, 255, 255, 0.1);
+            
+            /* 间距 */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            
+            /* 圆角 */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-pill: 9999px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: var(--spacing-md);
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+            background: linear-gradient(to right, var(--neon-pink), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: var(--spacing-md);
+            transition: all 0.2s ease;
+            box-shadow: 0 0 15px rgba(140, 82, 255, 0.5);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(140, 82, 255, 0.7);
+        }
+        
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            margin-bottom: var(--spacing-lg);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-pink));
+        }
+        
+        .card-title {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+        
+        .card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+            border-radius: 50%;
+            margin-right: var(--spacing-md);
+            box-shadow: 0 0 10px rgba(140, 82, 255, 0.4);
+        }
+        
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10px;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-green), var(--neon-yellow));
+            border-radius: var(--radius-pill);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--bg-deep);
+            border: 3px solid;
+            box-shadow: 0 0 10px rgba(0, 233, 255, 0.6);
+            z-index: 2;
+        }
+        
+        .timeline-item:nth-child(1) .timeline-dot {
+            border-color: var(--neon-blue);
+        }
+        
+        .timeline-item:nth-child(2) .timeline-dot {
+            border-color: var(--neon-green);
+        }
+        
+        .timeline-item:nth-child(3) .timeline-dot {
+            border-color: var(--neon-yellow);
+        }
+        
+        .timeline-date {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+            font-size: 18px;
+        }
+        
+        .timeline-content {
+            background: rgba(30, 30, 30, 0.6);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .timeline-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .data-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(0, 233, 255, 0.15);
+            color: var(--neon-blue);
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            margin-top: var(--spacing-sm);
+        }
+        
+        /* 三角形矩阵 */
+        .triangle-matrix {
+            position: relative;
+            height: 250px;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .triangle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .triangle-point {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .triangle-point:hover {
+            transform: scale(1.1);
+        }
+        
+        .point-a {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid var(--neon-blue);
+        }
+        
+        .point-b {
+            bottom: 0;
+            left: 10%;
+            border: 2px solid var(--neon-pink);
+        }
+        
+        .point-c {
+            bottom: 0;
+            right: 10%;
+            border: 2px solid var(--neon-green);
+        }
+        
+        .triangle::after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            width: 80%;
+            height: 160px;
+            transform: translateX(-50%);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            z-index: 1;
+        }
+        
+        .point-icon {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        
+        .point-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        
+        /* 同心圆投资罗盘 */
+        .compass {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        
+        .compass-circle {
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px dashed var(--border-light);
+        }
+        
+        .circle-outer {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(transparent, transparent),
+                         linear-gradient(45deg, rgba(255, 46, 147, 0.1), rgba(0, 233, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .circle-middle {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(transparent, transparent),
+                         linear-gradient(45deg, rgba(255, 46, 147, 0.15), rgba(0, 233, 255, 0.15));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .circle-inner {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(transparent, transparent),
+                         linear-gradient(45deg, rgba(255, 46, 147, 0.2), rgba(0, 233, 255, 0.2));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .compass-label {
+            position: absolute;
+            background: var(--bg-card);
+            padding: 6px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+        }
+        
+        .label-core {
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--neon-green);
+            border: 1px solid rgba(0, 255, 133, 0.3);
+        }
+        
+        .label-middle {
+            top: 35%;
+            right: 10%;
+            color: var(--neon-blue);
+            border: 1px solid rgba(0, 233, 255, 0.3);
+        }
+        
+        .label-outer {
+            bottom: 30%;
+            left: 10%;
+            color: var(--neon-pink);
+            border: 1px solid rgba(255, 46, 147, 0.3);
+        }
+        
+        /* 垂直时间树 */
+        .time-tree {
+            position: relative;
+            padding: var(--spacing-lg) 0;
+            margin-left: 20px;
+        }
+        
+        .tree-stem {
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon-green), var(--primary), var(--neon-blue));
+            left: 0;
+            top: 0;
+            border-radius: var(--radius-pill);
+        }
+        
+        .tree-node {
+            position: relative;
+            margin-left: 30px;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .tree-node::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: var(--border-light);
+            left: -30px;
+            top: 20px;
+        }
+        
+        .tree-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-deep);
+            left: -38px;
+            top: 12px;
+            z-index: 2;
+        }
+        
+        .tree-node:nth-child(1) .tree-dot {
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 8px rgba(0, 233, 255, 0.5);
+        }
+        
+        .tree-node:nth-child(2) .tree-dot {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 8px rgba(140, 82, 255, 0.5);
+        }
+        
+        .tree-node:nth-child(3) .tree-dot {
+            border: 2px solid var(--neon-green);
+            box-shadow: 0 0 8px rgba(0, 255, 133, 0.5);
+        }
+        
+        .tree-content {
+            background: rgba(30, 30, 30, 0.6);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+        }
+        
+        .tree-title {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .tree-title i {
+            margin-right: var(--spacing-sm);
+        }
+        
+        .tree-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* 网络节点图 */
+        .network {
+            position: relative;
+            height: 300px;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .node {
+            position: absolute;
+            padding: 10px 16px;
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .node-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+            z-index: 3;
+            box-shadow: 0 0 15px rgba(140, 82, 255, 0.4);
+        }
+        
+        .node-1 {
+            top: 10%;
+            left: 20%;
+            border-left: 3px solid var(--neon-blue);
+        }
+        
+        .node-2 {
+            top: 20%;
+            right: 10%;
+            border-left: 3px solid var(--neon-pink);
+        }
+        
+        .node-3 {
+            bottom: 15%;
+            left: 10%;
+            border-left: 3px solid var(--neon-green);
+        }
+        
+        .node-4 {
+            bottom: 20%;
+            right: 20%;
+            border-left: 3px solid var(--neon-yellow);
+        }
+        
+        .network::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 255, 133, 0.5);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 255, 133, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 255, 133, 0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+            color: var(--text-tertiary);
+            font-size: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">新材料行业发展全景图解</h1>
+            <a href="https://h0nvycm1fg.feishu.cn/wiki/ThMVwvqSVivEvtk0xJ7cfCAFnZf" class="cta-button">
+                <i class="fas fa-search-plus"></i> &nbsp;查看详细分析
+            </a>
+        </header>
+        
+        <div class="card">
+            <div class="card-title">
+                <div class="card-icon"><i class="fas fa-history"></i></div>
+                行业发展阶段轴
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">实验室阶段</div>
+                        <div class="timeline-desc">行业处于起步阶段，技术尚未成熟，但充满未来发展可能性</div>
+                        <div class="data-tag"><i class="fas fa-chart-pie"></i> 量产进度＜5%</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">量产突破</div>
+                        <div class="timeline-desc">行业关键技术取得突破，产业链开始形成完整闭环</div>
+                        <div class="data-tag"><i class="fas fa-chart-line"></i> 材料市场规模增长38%</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2030</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">工业普及</div>
+                        <div class="timeline-desc">新材料技术全面成熟，实现规模化生产和广泛应用</div>
+                        <div class="data-tag"><i class="fas fa-dollar-sign"></i> 碳纤维价格下降至¥4万/吨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                材料性能对比矩阵
+            </div>
+            
+            <div class="triangle-matrix">
+                <div class="triangle">
+                    <div class="triangle-point point-a">
+                        <div class="point-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="point-label">碳纤维<br>高强度</div>
+                    </div>
+                    
+                    <div class="triangle-point point-b">
+                        <div class="point-icon"><i class="fas fa-feather"></i></div>
+                        <div class="point-label">PEEK材料<br>轻量化</div>
+                    </div>
+                    
+                    <div class="triangle-point point-c">
+                        <div class="point-icon"><i class="fas fa-hand-paper"></i></div>
+                        <div class="point-label">电子皮肤<br>灵活性</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-content" style="margin-top: var(--spacing-md);">
+                <div class="timeline-title"><i class="fas fa-bolt"></i> 高强度: 碳纤维</div>
+                <div class="timeline-desc">抗拉强度5000MPa，可使机械臂减重70%</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-feather"></i> 轻量化: PEEK材料</div>
+                <div class="timeline-desc">密度仅1.3g/cm³，特斯拉手指关节提速140%</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-hand-paper"></i> 灵活性: 电子皮肤</div>
+                <div class="timeline-desc">300触点/cm²，成本2026年将降至¥800/m²</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <div class="card-icon"><i class="fas fa-compass"></i></div>
+                投资决策罗盘
+            </div>
+            
+            <div class="compass">
+                <div class="compass-circle circle-outer"></div>
+                <div class="compass-circle circle-middle"></div>
+                <div class="compass-circle circle-inner"></div>
+                
+                <div class="compass-label label-core">
+                    <i class="fas fa-check-circle"></i> 安全区
+                </div>
+                <div class="compass-label label-middle">
+                    <i class="fas fa-eye"></i> 观察区
+                </div>
+                <div class="compass-label label-outer pulse">
+                    <i class="fas fa-exclamation-triangle"></i> 风险区
+                </div>
+            </div>
+            
+            <div class="timeline-content" style="margin-top: var(--spacing-lg);">
+                <div class="timeline-title"><i class="fas fa-check-circle"></i> 安全区特征</div>
+                <div class="timeline-desc">已获车企认证，宁德时代历史PE＜40，如金发科技（量产进度＞30%）</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-eye"></i> 观察区特征</div>
+                <div class="timeline-desc">研发投入＞8%，存货周转＞90天，如中复神鹰（科创板试产）</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-exclamation-triangle"></i> 风险区特征</div>
+                <div class="timeline-desc">概念股炒作，近期涨幅＞120%，如特沃股份（未上市标的）</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <div class="card-icon"><i class="fas fa-tree"></i></div>
+                材料进化时间树
+            </div>
+            
+            <div class="time-tree">
+                <div class="tree-stem"></div>
+                
+                <div class="tree-node">
+                    <div class="tree-dot"></div>
+                    <div class="tree-content">
+                        <div class="tree-title">
+                            <i class="fas fa-seedling"></i> 基础层: 传统尼龙
+                        </div>
+                        <div class="tree-desc">当前产能过剩30%，未来将向特种尼龙演变</div>
+                    </div>
+                </div>
+                
+                <div class="tree-node">
+                    <div class="tree-dot"></div>
+                    <div class="tree-content">
+                        <div class="tree-title">
+                            <i class="fas fa-atom"></i> 核心层: 工程塑料
+                        </div>
+                        <div class="tree-desc">PEEK改性技术突破，成本年降幅达7%</div>
+                    </div>
+                </div>
+                
+                <div class="tree-node">
+                    <div class="tree-dot"></div>
+                    <div class="tree-content">
+                        <div class="tree-title">
+                            <i class="fas fa-rocket"></i> 创新层: 复合材料
+                        </div>
+                        <div class="tree-desc">碳纤维+电子皮肤前沿方向，预计5-8年量产窗口</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                产业关联网络
+            </div>
+            
+            <div class="network">
+                <div class="node node-center">特斯拉量产计划</div>
+                <div class="node node-1">材料认证体系</div>
+                <div class="node node-2">设备供应商</div>
+                <div class="node node-3">工业应用场景</div>
+                <div class="node node-4">医疗应用场景</div>
+            </div>
+            
+            <div class="timeline-content">
+                <div class="timeline-title"><i class="fas fa-bullseye"></i> 核心驱动</div>
+                <div class="timeline-desc">特斯拉量产计划，目标成本$2.3万（2024）</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-certificate"></i> 关键标准</div>
+                <div class="timeline-desc">材料认证体系要求耐260℃/抗冲击</div>
+                
+                <div class="timeline-title" style="margin-top:12px"><i class="fas fa-cogs"></i> 设备支撑</div>
+                <div class="timeline-desc">关键设备为2000℃碳化炉</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 新材料行业分析 | 技术支持: 霓虹暗黑UI
+        </div>
+    </div>
+</body>
+</html>
 
