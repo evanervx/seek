@@ -1,1 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米机器人深度分析报告</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-black text-gray-200">
+    <div class="noise"></div>
+    
+    <header class="relative z-10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-2 h-10 bg-gradient-to-b from-purple-500 to-blue-500"></div>
+                    <h1 class="text-3xl font-bold tracking-tighter text-white">小米机器人</h1>
+                    <div class="hidden md:block bg-gray-800 px-3 py-1 rounded-full text-xs font-geist-mono">深度调研分析</div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="text-xs text-gray-500 hidden md:block">
+                        最后更新: 2024.06.13
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-500 to-blue-500 p-[1px] rounded-full">
+                        <div class="bg-black rounded-full px-4 py-1">
+                            <span class="font-geist-mono text-sm text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">ALPHA研究室</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <div class="container mx-auto px-4 py-8">
+            <!-- Hero Section -->
+            <section class="mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">小米机器人业务<br>深度分析报告</h2>
+                        <p class="text-gray-400 mb-8 text-lg">本报告深入剖析小米机器人业务发展现状、技术优势、市场格局及投资机会，为投资者和行业分析师提供全面视角。</p>
+                        <div class="flex gap-4 items-center">
+                            <div class="flex items-center gap-2 px-4 py-2 bg-gray-900 rounded-lg">
+                                <i data-lucide="calendar" class="w-4 h-4 text-purple-500"></i>
+                                <span class="font-geist-mono text-sm">2024年6月</span>
+                            </div>
+                            <div class="flex items-center gap-2 px-4 py-2 bg-gray-900 rounded-lg">
+                                <i data-lucide="bar-chart-2" class="w-4 h-4 text-blue-500"></i>
+                                <span class="font-geist-mono text-sm">行业分析</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/cyberone/swiper1-m.jpg" alt="小米CyberOne机器人" class="w-full h-auto rounded-lg object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column -->
+                <div class="lg:col-span-2">
+                    <!-- Market Overview Section -->
+                    <section class="glass-card mb-10">
+                        <div class="neon-border p-6 rounded-lg">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                    <i data-lucide="globe" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-white">市场概览</h2>
+                            </div>
+                            <p class="text-gray-300 mb-6">小米机器人业务在2024年的市场表现呈现增长态势，尤其是在扫地机器人和割草机器人领域。</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                        <h3 class="text-lg font-semibold text-white">扫地机器人</h3>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-3">2024年第四季度，小米扫地机器人的线上销售额迎来显著增长，10月至11月期间暴涨94%。</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs font-geist-mono text-gray-500">市场排名</span>
+                                        <span class="text-sm font-geist-mono text-white">全球前四</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        <h3 class="text-lg font-semibold text-white">割草机器人</h3>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-3">九号公司（小米生态链企业）的Navimow智能割草机器人全球销售收入达4.49亿元，同比增长316.69%。</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs font-geist-mono text-gray-500">同比增长</span>
+                                        <span class="text-sm font-geist-mono text-green-400">+316.69%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-800 pt-6">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <i data-lucide="trending-up" class="w-4 h-4 text-green-500"></i>
+                                    <span class="text-sm font-semibold text-white">行业趋势</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">九号公司作为小米生态链的早期助力企业，已逐渐减少对小米渠道的依赖。2023年，小米定制产品分销收入在九号公司总营收中的占比已降至4.3%。九号公司正转型为以自主品牌建设为核心的发展阶段。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Product Portfolio Section -->
+                    <section class="mb-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="layers" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">产品矩阵</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- CyberOne -->
+                            <div class="glass-card neon-border p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <img src="https://robozaps.com/wp-content/uploads/2024/06/0b65411b675e59ac41627c907ead6d32fee9b54f-1200x1000-1-1024x853.jpg" alt="小米CyberOne" class="w-full h-auto rounded-lg object-cover">
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-bold text-white">CyberOne 人形机器人</h3>
+                                            <span class="bg-gray-800 px-2 py-1 rounded-full text-xs font-geist-mono">2022年发布</span>
+                                        </div>
+                                        <p class="text-gray-300 mb-4">小米于2022年8月11日的十二周年活动中发布了CyberOne全尺寸人形仿生机器人，是小米对未来科技生态的探索。</p>
+                                        
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">身高</div>
+                                                <div class="text-white font-geist-mono">1.77米</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">重量</div>
+                                                <div class="text-white font-geist-mono">52公斤</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">自由度</div>
+                                                <div class="text-white font-geist-mono">21个</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">峰值扭矩</div>
+                                                <div class="text-white font-geist-mono">300N·m</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">情绪感知</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">环境语义识别</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">自研全身控制算法</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Mi Sense视觉系统</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CyberDog -->
+                            <div class="glass-card neon-border p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <img src="https://img1.mydrivers.com/img/20230219/3a6cb711-cfb8-4270-b159-dcbdc0928d2e.jpg" alt="小米CyberDog" class="w-full h-auto rounded-lg object-cover">
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-bold text-white">CyberDog 四足机器人</h3>
+                                            <span class="bg-gray-800 px-2 py-1 rounded-full text-xs font-geist-mono">2021年发布</span>
+                                        </div>
+                                        <p class="text-gray-300 mb-4">CyberDog（铁蛋）首次发布于2021年8月10日，2023年8月14日发布了CyberDog 2，性能全面升级。</p>
+                                        
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">自由度</div>
+                                                <div class="text-white font-geist-mono">12个</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">最大扭矩</div>
+                                                <div class="text-white font-geist-mono">32N·m</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">最快速度</div>
+                                                <div class="text-white font-geist-mono">3.2m/s</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">传感器</div>
+                                                <div class="text-white font-geist-mono">11组</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">自研伺服电机</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">NVIDIA JETSON平台</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">开源API</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">纯视觉解决方案</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sweeping Robot -->
+                            <div class="glass-card neon-border p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="md:w-1/3">
+                                        <img src="https://www.eet-china.com/d/file/kj/1/25f7145/2022-08-12/84d7e2163e9e7d09001ebf065238a6de.png" alt="小米扫地机器人" class="w-full h-auto rounded-lg object-cover">
+                                    </div>
+                                    <div class="md:w-2/3">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-bold text-white">米家扫地机器人系列</h3>
+                                            <span class="bg-gray-800 px-2 py-1 rounded-full text-xs font-geist-mono">主力产品</span>
+                                        </div>
+                                        <p class="text-gray-300 mb-4">小米扫地机器人主要面向中低端市场，产品价格通常低于1500元，以性价比著称。线上销售额在2024年实现了94%的显著增长。</p>
+                                        
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">导航系统</div>
+                                                <div class="text-white font-geist-mono">LDS激光</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">吸力</div>
+                                                <div class="text-white font-geist-mono">5000Pa</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">市场份额</div>
+                                                <div class="text-white font-geist-mono">~10%</div>
+                                            </div>
+                                            <div class="bg-gray-900 p-3 rounded-lg">
+                                                <div class="text-xs text-gray-500 mb-1">市场排名</div>
+                                                <div class="text-white font-geist-mono">前5</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">SLAM算法</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">智能路径规划</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">远程智能控制</span>
+                                            <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">米家APP集成</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Technical Advantages Section -->
+                    <section class="mb-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="cpu" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">技术优势分析</h2>
+                        </div>
+
+                        <div class="glass-card neon-border p-6 rounded-lg">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-4">环境感知能力</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">CyberOne搭载Mi-Sense深度视觉模组，可对真实世界进行三维虚拟重建</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">结合AI算法提供完整的三维空间感知能力</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">扫地机器人采用LDS激光测距传感器和SLAM算法构建高精度地图</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-4">运动控制能力</h3>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">CyberOne支持21个自由度，各自由度0.5ms级别的实时响应</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">自研高效电机保证上肢灵活性，髋关节电机峰值扭矩达300N·m</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-gray-300 text-sm">CyberDog搭载自研高性能伺服电机，最快行走速度达3.2m/s</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-gray-800">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white mb-4">人机交互能力</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">CyberOne搭载自研MiAI环境语义识别引擎和语音情绪识别引擎</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">可识别85种环境音和6大类45种人类情绪</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">扫地机器人可通过米家APP进行智能交互和远程控制</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white mb-4">技术难点与挑战</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="alert-circle" class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">CyberOne成本高达六、七十万元，尚不能实现量产</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="alert-circle" class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">人形机器人关键技术如平衡控制、动力学模型等有待突破</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="alert-circle" class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5"></i>
+                                                <span class="text-gray-300 text-sm">扫地机器人在避障能力和AI算法准确性方面仍需提升</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <!-- Market Competition Section -->
+                    <section class="glass-card neon-border p-6 rounded-lg mb-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">市场竞争分析</h2>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-md font-semibold text-white mb-3">扫地机器人市场格局</h3>
+                            <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">科沃斯</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-purple-500" style="width: 34%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">34%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">石头科技</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-purple-500" style="width: 22%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">22%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">追觅</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-purple-500" style="width: 14%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">14%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">小米</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-blue-500" style="width: 10%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">10%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">云鲸</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-purple-500" style="width: 8%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">8%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-400">其他</span>
+                                        <div class="w-32 bg-gray-700 h-2 rounded-full overflow-hidden">
+                                            <div class="h-full bg-gray-500" style="width: 12%"></div>
+                                        </div>
+                                        <span class="text-sm font-geist-mono text-white">12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500">数据来源：2023年中国扫地机器人线上市场份额</p>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-800">
+                            <h3 class="text-md font-semibold text-white mb-3">竞争态势</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">扫地机器人市场集中度高，CR5占据约90%市场份额</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">小米凭借性价比和品牌效应占据约10%的市场份额</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">人形机器人领域，小米面临波士顿动力、特斯拉等强劲竞争</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">四足机器人领域，小米CyberDog与Spot、Unitree等竞争</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- SWOT Analysis Section -->
+                    <section class="glass-card neon-border p-6 rounded-lg mb-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="clipboard-list" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">SWOT分析</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-green-800">
+                                <h3 class="text-md font-semibold text-green-400 mb-3">优势 (Strengths)</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">品牌影响力和用户基础</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">完善的智能家居生态系统</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">供应链管理和成本控制能力</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-red-800">
+                                <h3 class="text-md font-semibold text-red-400 mb-3">劣势 (Weaknesses)</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">核心技术积累不足</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">高端市场经验欠缺</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="x" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">对生态链企业依赖</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-blue-800">
+                                <h3 class="text-md font-semibold text-blue-400 mb-3">机会 (Opportunities)</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="plus" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">服务机器人市场持续增长</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="plus" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">AI技术快速发展</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="plus" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">应用场景不断拓展</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-yellow-800">
+                                <h3 class="text-md font-semibold text-yellow-400 mb-3">威胁 (Threats)</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="minus" class="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">市场竞争日益激烈</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="minus" class="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">技术迭代速度快</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="minus" class="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm">零部件成本压力</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Investment Opportunities Section -->
+                    <section class="glass-card neon-border p-6 rounded-lg">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="bar-chart" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">投资机会</h2>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-md font-semibold text-white mb-3">核心标的</h3>
+                                <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 mb-2">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <span class="text-white font-semibold">小米集团-W</span>
+                                            <span class="text-gray-500 text-xs ml-2 font-geist-mono">01810.HK</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-green-500 font-geist-mono">+2.34%</span>
+                                            <i data-lucide="trending-up" class="w-4 h-4 text-green-500"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">小米集团作为综合性科技公司，机器人业务是其重要的增长点之一。如果小米在机器人领域取得突破，将显著提升公司估值。</p>
+                                </div>
+                                <p class="text-xs text-gray-500">*股价波动为模拟数据，仅供参考</p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-md font-semibold text-white mb-3">产业链投资机会</h3>
+                                <div class="space-y-3">
+                                    <div class="bg-gray-900 p-3 rounded-lg border border-gray-800">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="text-white text-sm font-semibold">思必驰</span>
+                                            <span class="text-xs bg-purple-900 text-purple-300 px-2 py-0.5 rounded-full">语音交互</span>
+                                        </div>
+                                        <p class="text-gray-400 text-xs">人工智能语音技术服务提供商，为智能家居、机器人等领域提供语音交互解决方案。</p>
+                                    </div>
+                                    <div class="bg-gray-900 p-3 rounded-lg border border-gray-800">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="text-white text-sm font-semibold">速腾聚创</span>
+                                            <span class="text-xs bg-blue-900 text-blue-300 px-2 py-0.5 rounded-full">激光雷达</span>
+                                        </div>
+                                        <p class="text-gray-400 text-xs">激光雷达传感器供应商，为自动驾驶、机器人等领域提供环境感知解决方案。</p>
+                                    </div>
+                                    <div class="bg-gray-900 p-3 rounded-lg border border-gray-800">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="text-white text-sm font-semibold">汇川技术</span>
+                                            <span class="text-xs bg-purple-900 text-purple-300 px-2 py-0.5 rounded-full">300124.SZ</span>
+                                        </div>
+                                        <p class="text-gray-400 text-xs">工业自动化控制产品及解决方案供应商，产品包括伺服系统、变频器等。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-gray-800">
+                                <h3 class="text-md font-semibold text-white mb-3">投资建议</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm"><span class="text-white font-semibold">保守型投资者:</span> 建议配置小米集团股票，并关注机器人产业链龙头企业。</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm"><span class="text-white font-semibold">稳健型投资者:</span> 建议配置小米集团股票，并适当参与机器人概念主题基金。</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-300 text-sm"><span class="text-white font-semibold">激进型投资者:</span> 建议配置小米集团股票，并积极参与机器人产业链新兴企业投资。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Strategic Recommendations Section -->
+            <section class="glass-card neon-border p-6 rounded-lg mb-10 mt-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <i data-lucide="lightbulb" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white">战略建议</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-purple-800 transition-all">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="target" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white">聚焦核心优势，差异化竞争</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">充分利用小米在品牌、生态系统和成本控制方面的优势</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">聚焦扫地机器人等优势品类，不断进行产品创新</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">在巩固国内市场的同时，积极拓展海外市场</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-purple-800 transition-all">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="network" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white">加强生态合作，共建机器人生态</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">与生态链企业加强合作，共同开发机器人产品</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">建立开放的机器人软件平台，吸引开发者参与应用开发</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">扩大机器人产品的应用场景，提升生态系统价值</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-purple-800 transition-all">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                                <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white">突破人形机器人技术瓶颈</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">加大对人形机器人领域的研发投入，攻克关键技术</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">与国内外高校和研究机构建立合作关系，共同进行技术研究</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-gray-300 text-sm">引进人形机器人领域的高端人才，提升研发实力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion Section -->
+            <section class="glass-card neon-border p-8 rounded-lg">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <i data-lucide="file-text" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white">结论与展望</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-gray-300">小米在机器人领域的布局展现了其对未来科技发展的前瞻性思考。从实用性的扫地机器人到前沿探索的CyberOne人形机器人，小米正在构建多元化的机器人产品矩阵。</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-4">短期展望</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">扫地机器人业务将继续保持增长，市场份额有望进一步提升</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">通过生态链协同，扩大机器人产品线，提升产品竞争力</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">加强与上游核心零部件供应商合作，降低成本压力</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-4">长期展望</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">人形机器人技术突破将为小米开辟全新增长空间</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">构建完整的机器人生态系统，实现多场景应用</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-300 text-sm">AI大模型与机器人技术的融合将带来新一代智能机器人</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-6 border-t border-gray-800">
+                        <p class="text-gray-300">总体而言，小米在机器人领域具备品牌、渠道和成本控制等优势，但在核心技术方面仍需突破。随着机器人市场的持续增长和技术的不断进步，小米有望在此领域取得更大的发展。对投资者而言，小米机器人业务代表了一个充满潜力的投资机会，值得长期关注。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="relative z-10 mt-20 bg-gray-900">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-800 pt-6">
+                <div class="text-gray-500 text-sm">
+                    © 2024 ALPHA研究室 · 小米机器人深度调研分析报告
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    免责声明：本报告仅供参考，不构成投资建议
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
