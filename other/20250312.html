@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI作为法律人的第二大脑</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --neon-blue: #58A6FF;
+            --neon-pink: #EC6CB9;
+            --neon-green: #33D778;
+            --neon-purple: #BD34FE;
+            --neon-orange: #FF9C41;
+            --dark-bg: #0D1117;
+            --card-bg: #1E2731;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A9B7C6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .font-geist-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .neon-border {
+            position: relative;
+        }
+        
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink), var(--neon-purple));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        
+        .neon-text-blue {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+        }
+        
+        .neon-text-pink {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px rgba(236, 108, 185, 0.5);
+        }
+        
+        .neon-text-green {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px rgba(51, 215, 120, 0.5);
+        }
+        
+        .neon-text-purple {
+            color: var(--neon-purple);
+            text-shadow: 0 0 5px rgba(189, 52, 254, 0.5);
+        }
+        
+        .neon-text-orange {
+            color: var(--neon-orange);
+            text-shadow: 0 0 5px rgba(255, 156, 65, 0.5);
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .grid-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .glow-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            margin: 2rem 0;
+            opacity: 0.6;
+        }
+        
+        .icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin: 8px 0 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .data-card {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(30, 39, 49, 0.6);
+            backdrop-filter: blur(12px);
+            margin-bottom: 1rem;
+        }
+        
+        .data-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            padding: 1px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.7;
+        }
+        
+        .hexagon {
+            width: 60px;
+            height: 34.64px;
+            background-color: rgba(88, 166, 255, 0.2);
+            position: relative;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .hexagon:before,
+        .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+        }
+        
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 17.32px solid rgba(88, 166, 255, 0.2);
+        }
+        
+        .hexagon:after {
+            top: 100%;
+            border-top: 17.32px solid rgba(88, 166, 255, 0.2);
+        }
+        
+        .hexagon:hover {
+            background-color: rgba(88, 166, 255, 0.4);
+        }
+        
+        .hexagon:hover:before {
+            border-bottom-color: rgba(88, 166, 255, 0.4);
+        }
+        
+        .hexagon:hover:after {
+            border-top-color: rgba(88, 166, 255, 0.4);
+        }
+        
+        .arrow-line {
+            position: relative;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            margin: 1.5rem 0;
+            opacity: 0.7;
+        }
+        
+        .arrow-line:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid var(--neon-pink);
+        }
+        
+        .step-card {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 1rem;
+        }
+        
+        .step-card:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--neon-blue), var(--neon-pink));
+            opacity: 0.5;
+        }
+        
+        .step-card:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .warning-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(255, 156, 65, 0.2);
+            color: var(--neon-orange);
+            font-size: 0.875rem;
+            margin-right: 8px;
+        }
+        
+        .success-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(51, 215, 120, 0.2);
+            color: var(--neon-green);
+            font-size: 0.875rem;
+            margin-right: 8px;
+        }
+        
+        @keyframes glow {
+            0% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
+        
+        .glow-effect {
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .btn-detail {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
+            margin-top: 1.5rem;
+        }
+        
+        .btn-detail:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
+        }
+        
+        .btn-detail:active {
+            transform: translateY(0);
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .grid-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .hexagon {
+                width: 40px;
+                height: 23.1px;
+            }
+            
+            .hexagon:before,
+            .hexagon:after {
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+            
+            .hexagon:before {
+                border-bottom: 11.55px solid rgba(88, 166, 255, 0.2);
+            }
+            
+            .hexagon:after {
+                border-top: 11.55px solid rgba(88, 166, 255, 0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+                <span class="neon-text-blue">AI</span>作为法律人的<span class="neon-text-pink">第二大脑</span>
+                <div class="absolute h-1 w-3/4 bg-gradient-to-r from-transparent via-blue-500 to-transparent left-1/2 transform -translate-x-1/2 bottom-0"></div>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-semibold mt-4">需人工训练、验证与修正的辅助决策系统</p>
+            <div class="mt-6">
+                <a href="https://h0nvycm1fg.feishu.cn/wiki/F5f0wUQx1iG6vekxVGdcXLfanKd" target="_blank" class="btn-detail">
+                    查看详细分析
+                </a>
+            </div>
+        </header>
+        
+        <section class="mb-16">
+            <div class="card neon-border">
+                <div class="flex items-center mb-4">
+                    <div class="icon-box bg-gradient-to-r from-blue-600/20 to-blue-400/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><polyline points="9 3 9 18"/><polyline points="15 6 15 21"/></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold ml-3 neon-text-blue">一：AI工具作战地图</h2>
+                </div>
+                
+                <div class="grid-card mt-8">
+                    <!-- 法律研究卡片 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400 mr-2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                            1. 法律研究（精准打击）
+                        </h3>
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <span class="text-blue-400 mr-2">主武器：</span>
+                                <span class="font-geist-mono">DeepSeek</span>
+                                <span class="text-xs text-gray-400 ml-2">($20/月，20次深度报告)</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="success-tag">作用</span>
+                                <span>10分钟生成港股分拆上市规则报告（含法规链接+案例）</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="warning-tag">风险</span>
+                                <span>可能漏掉关键细节（如秘塔误将A股规则套用到港股）</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="text-blue-400 mr-2">副武器：</span>
+                                <span class="font-geist-mono">秘塔搜索</span>
+                                <span class="text-xs text-gray-400 ml-1">(免费快速验证)</span> + 
+                                <span class="font-geist-mono">腾讯元宝</span>
+                                <span class="text-xs text-gray-400 ml-1">(公众号观点雷达)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 合同审查卡片 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400 mr-2"><rect width="14" height="14" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+                            2. 合同审查（人机博弈）
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="success-tag">战术</span>
+                                <span>案牍插件预判风险 → 律师删减多余条款</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="warning-tag">典型冲突</span>
+                                <span>AI建议 必须写违约金 <span class="text-pink-400">vs</span> 客户要求快速签约</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="text-blue-400 mr-2">数据：</span>
+                                <span>耗时从2小时→30分钟，但需人工否决30%建议</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 数据计算卡片 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400 mr-2"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                            3. 数据计算（替代人力）
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="success-tag">场景</span>
+                                <span>WPS AI计算30天股价平均 → 结果11.51元</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="text-green-400 mr-2">防错机制：</span>
+                                <span>人工抽查3天数据（误差率<1%）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="glow-line"></div>
+        
+        <section class="mb-16">
+            <div class="card neon-border">
+                <div class="flex items-center mb-4">
+                    <div class="icon-box bg-gradient-to-r from-pink-600/20 to-pink-400/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold ml-3 neon-text-pink">二、AI驯化手册</h2>
+                </div>
+                
+                <div class="grid-card mt-8">
+                    <!-- 身份绑定法 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400 mr-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                            1. 身份绑定法
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="warning-tag">错误指令</span>
+                                <span>写诉讼流程 → 通用模板</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="success-tag">正确指令</span>
+                                <span>作为公司法务，需向业务部解释含时间节点的诉讼流程 → 生成举证期限+配合事项</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 喂食学习法 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400 mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                            2. 喂食学习法
+                        </h3>
+                        <div class="mb-4">
+                            <p class="mb-2 text-gray-300">步骤：</p>
+                            <div class="step-card">
+                                <p>投喂往年报告 → AI总结套路（立法+案例+趋势）</p>
+                            </div>
+                            <div class="step-card">
+                                <p>生成2024年草稿 → 删除30%虚构案例</p>
+                            </div>
+                            <div class="step-card">
+                                <p>追加真实数据 → 可用版本</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 模板克隆术 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400 mr-2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            3. 模板克隆术
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="success-tag">案例</span>
+                                <span>上传客户邮件模板 → AI模仿生成判决汇报 → 删减50%冗长内容</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="glow-line"></div>
+        
+        <section class="mb-16">
+            <div class="card neon-border">
+                <div class="flex items-center mb-4">
+                    <div class="icon-box bg-gradient-to-r from-purple-600/20 to-purple-400/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold ml-3 neon-text-purple">三、知识库防御工事</h2>
+                </div>
+                
+                <div class="grid-card mt-8">
+                    <!-- 本地弹药库 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 mr-2"><line x1="22" x2="2" y1="12" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" x2="6" y1="16" y2="16"/><line x1="10" x2="10" y1="16" y2="16"/></svg>
+                            1. 本地弹药库（Cherry Studio）
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="success-tag">优势</span>
+                                <span>无上限存储合同模板/内部法规</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="warning-tag">缺陷</span>
+                                <span>无法团队共享，引用时需手动翻原文</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 云端共享库 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 mr-2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                            2. 云端共享库（EMA）
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="text-purple-400 mr-2">规则：</span>
+                                <span>单个文件≤500页，总容量≤2G（约存300份判例）</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="success-tag">协作价值</span>
+                                <span>上传《破产法解释》→ 全团队调用条文</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 分类守则 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400 mr-2"><line x1="12" x2="12" y1="2" y2="22"/><path d="M2 6h20"/><path d="M2 12h20"/><path d="M2 18h20"/></svg>
+                            3. 分类守则
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="warning-tag">致命错误</span>
+                                <span>混杂合同+证券+破产文件 → 检索失效</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="success-tag">标准动作</span>
+                                <span>建立专用库（示例：证券虚假陈述案例库）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="glow-line"></div>
+        
+        <section class="mb-16">
+            <div class="card neon-border">
+                <div class="flex items-center mb-4">
+                    <div class="icon-box bg-gradient-to-r from-orange-600/20 to-orange-400/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m12 8 1 1-1 1-1-1 1-1"/></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold ml-3 neon-text-orange">四、风险防火墙</h2>
+                </div>
+                
+                <div class="grid-card mt-8">
+                    <!-- 幻觉拦截网 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400 mr-2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                            1. 幻觉拦截网
+                        </h3>
+                        <div class="mb-4">
+                            <div class="step-card">
+                                <p><span class="text-orange-400 font-semibold">第一层：</span>DeepSeek+秘塔交叉验证（50%误报率↓至10%）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-orange-400 font-semibold">第二层：</span>死磕PDF原文（如A股规则第X条高亮对比）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-orange-400 font-semibold">第三层：</span>律师直觉否决（如 0元转让股权 直接标记异常）</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 经典翻车案例 -->
+                    <div class="data-card">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400 mr-2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                            2. 经典翻车案例
+                        </h3>
+                        <div class="mb-4">
+                            <div class="mb-2">
+                                <span class="warning-tag">虚构文书</span>
+                                <span>AI伪造 2023民终666号 判决 → 人工核查无记录</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="warning-tag">规则误植</span>
+                                <span>港股分拆误用A股50%利润要求 → 手动修正</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="glow-line"></div>
+        
+        <section class="mb-16">
+            <div class="card neon-border">
+                <div class="flex items-center mb-4">
+                    <div class="icon-box bg-gradient-to-r from-green-600/20 to-green-400/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                    </div>
+                    <h2 class="text-2xl font-bold ml-3 neon-text-green">五、工作流沙盘</h2>
+                </div>
+                
+                <div class="mt-8">
+                    <div class="data-card mb-6">
+                        <h3 class="text-xl font-bold mb-3">客户问题：<span class="text-gray-300">港股上市同业竞争如何解决？</span></h3>
+                        
+                        <div class="workflow-steps">
+                            <div class="step-card">
+                                <p><span class="text-green-400 font-semibold">步骤1：</span>DeepSeek启动（10分钟生成初步报告）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-green-400 font-semibold">步骤2：</span>元宝补充（抓取3篇公众号行业共识）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-green-400 font-semibold">步骤3：</span>秘塔验证（发现财务指标引用错误 → 手动修正）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-green-400 font-semibold">步骤4：</span>知识库调用（插入过往类似案例结论）</p>
+                            </div>
+                            <div class="step-card">
+                                <p><span class="text-green-400 font-semibold">步骤5：</span>终稿检查（AI纠错后发出）</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-card">
+                        <!-- 数据看板 -->
+                        <div class="data-card h-full">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400 mr-2"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+                                数据看板
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <p class="text-gray-300 mb-1">效率提升：法律研究</p>
+                                    <div class="stat-number neon-text-green">300%</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-300 mb-1">效率提升：合同审查</p>
+                                    <div class="stat-number neon-text-green">240%</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-300 mb-1">成本消耗</p>
+                                    <div class="flex items-baseline">
+                                        <span class="stat-number neon-text-blue">$20</span>
+                                        <span class="text-gray-300 text-sm ml-2">工具费/月 vs 8小时人力成本</span>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-gray-300 mb-1">风险概率</p>
+                                    <div class="flex items-baseline">
+                                        <span class="stat-number neon-text-orange">30% → 5%</span>
+                                        <span class="text-gray-300 text-sm ml-2">幻觉率 → 经验证后</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 终局原则 -->
+                        <div class="data-card h-full">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400 mr-2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                                终局原则
+                            </h3>
+                            
+                            <div class="relative my-8">
+                                <div class="hexagon flex items-center justify-center text-blue-400 glow-effect">
+                                    <span class="text-xs">AI产出</span>
+                                </div>
+                                <div class="arrow-line mt-6"></div>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-xl font-bold neon-text-blue mb-2">70%</div>
+                                    <p class="text-sm text-gray-300">机器初稿</p>
+                                </div>
+                                
+                                <div>
+                                    <div class="text-xl font-bold neon-text-pink mb-2">20%</div>
+                                    <p class="text-sm text-gray-300">人工修正</p>
+                                </div>
+                                
+                                <div>
+                                    <div class="text-xl font-bold neon-text-orange mb-2">10%</div>
+                                    <p class="text-sm text-gray-300">风险兜底</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center text-gray-400 text-sm py-6">
+            <p>AI法律工具分析与使用指南</p>
+        </footer>
+    </div>
+
+    <script>
+        // Prevent zooming
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false });
+        
+        // Disable other zoom methods
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Animate on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
