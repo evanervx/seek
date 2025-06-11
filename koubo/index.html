@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装拉链类型完整指南 | Complete Guide to Clothing Zippers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">服装拉链类型完整指南</h1>
+            <p class="header__subtitle">Complete Guide to Clothing Zippers</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav__list">
+                <li><button class="nav__btn nav__btn--active" data-section="home">首页 Home</button></li>
+                <li><button class="nav__btn" data-section="types">拉链类型 Types</button></li>
+                <li><button class="nav__btn" data-section="applications">应用场景 Applications</button></li>
+                <li><button class="nav__btn" data-section="sizes">尺寸指南 Size Guide</button></li>
+                <li><button class="nav__btn" data-section="comparison">对比工具 Compare</button></li>
+                <li><button class="nav__btn" data-section="wizard">选择助手 Wizard</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <!-- Home Section -->
+            <section id="home" class="section section--active">
+                <div class="hero">
+                    <h2 class="hero__title">拉链在时装中的重要性</h2>
+                    <p class="hero__text">拉链不仅是功能性配件，更是时装设计的重要元素。了解不同类型的拉链能帮助您为每个项目选择最合适的选项。</p>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <span class="stat__number">10</span>
+                            <span class="stat__label">拉链类型</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">9</span>
+                            <span class="stat__label">尺寸规格</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">10</span>
+                            <span class="stat__label">应用场景</span>
+                        </div>
+                    </div>
+                    <div class="hero__images">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749622685/pplx_project_search_images/bb2546e98a6472d130895684a35618a9e0866074.jpg" alt="拉链尺寸图表" class="hero__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749622685/pplx_project_search_images/8911b987ee483e10cd46d39556b9a318d244cd61.jpg" alt="彩色拉链" class="hero__image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Zipper Types Section -->
+            <section id="types" class="section">
+                <h2 class="section__title">拉链类型 | Zipper Types</h2>
+                <div class="filters">
+                    <button class="filter-btn filter-btn--active" data-filter="all">全部 All</button>
+                    <button class="filter-btn" data-filter="低-中">经济型 Budget</button>
+                    <button class="filter-btn" data-filter="中">中档 Mid-range</button>
+                    <button class="filter-btn" data-filter="中-高">高档 Premium</button>
+                    <button class="filter-btn" data-filter="高">顶级 Luxury</button>
+                </div>
+                <div class="zipper-grid" id="zipperGrid"></div>
+            </section>
+
+            <!-- Applications Section -->
+            <section id="applications" class="section">
+                <h2 class="section__title">应用场景 | Applications</h2>
+                <div class="applications-grid" id="applicationsGrid"></div>
+            </section>
+
+            <!-- Size Guide Section -->
+            <section id="sizes" class="section">
+                <h2 class="section__title">尺寸指南 | Size Guide</h2>
+                <div class="size-guide">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1749622685/pplx_project_search_images/bb2546e98a6472d130895684a35618a9e0866074.jpg" alt="拉链尺寸对照表" class="size-chart">
+                    <div class="size-table" id="sizeTable"></div>
+                </div>
+            </section>
+
+            <!-- Comparison Section -->
+            <section id="comparison" class="section">
+                <h2 class="section__title">拉链对比 | Zipper Comparison</h2>
+                <div class="comparison-tool">
+                    <div class="comparison-selectors">
+                        <div class="comparison-selector">
+                            <label class="form-label">选择拉链 1 | Select Zipper 1</label>
+                            <select class="form-control" id="compareSelect1">
+                                <option value="">选择...</option>
+                            </select>
+                        </div>
+                        <div class="comparison-selector">
+                            <label class="form-label">选择拉链 2 | Select Zipper 2</label>
+                            <select class="form-control" id="compareSelect2">
+                                <option value="">选择...</option>
+                            </select>
+                        </div>
+                        <div class="comparison-selector">
+                            <label class="form-label">选择拉链 3 | Select Zipper 3 (可选)</label>
+                            <select class="form-control" id="compareSelect3">
+                                <option value="">选择...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="comparison-results" id="comparisonResults"></div>
+                </div>
+            </section>
+
+            <!-- Selection Wizard Section -->
+            <section id="wizard" class="section">
+                <h2 class="section__title">选择助手 | Selection Wizard</h2>
+                <div class="wizard">
+                    <div class="wizard-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text">步骤 <span id="currentStep">1</span> / 4</span>
+                    </div>
+                    <div class="wizard-content" id="wizardContent">
+                        <div class="wizard-step wizard-step--active" data-step="1">
+                            <h3>您要制作什么类型的服装？</h3>
+                            <div class="wizard-options">
+                                <button class="wizard-option" data-value="连衣裙">连衣裙 Dress</button>
+                                <button class="wizard-option" data-value="夹克">夹克 Jacket</button>
+                                <button class="wizard-option" data-value="裤子">裤子 Pants</button>
+                                <button class="wizard-option" data-value="裙子">裙子 Skirt</button>
+                                <button class="wizard-option" data-value="外套">外套 Coat</button>
+                                <button class="wizard-option" data-value="其他">其他 Other</button>
+                            </div>
+                        </div>
+                        <div class="wizard-step" data-step="2">
+                            <h3>面料的重量如何？</h3>
+                            <div class="wizard-options">
+                                <button class="wizard-option" data-value="轻薄面料">轻薄面料 Light Fabric</button>
+                                <button class="wizard-option" data-value="中等重量">中等重量 Medium Weight</button>
+                                <button class="wizard-option" data-value="厚重面料">厚重面料 Heavy Fabric</button>
+                            </div>
+                        </div>
+                        <div class="wizard-step" data-step="3">
+                            <h3>您的预算范围是？</h3>
+                            <div class="wizard-options">
+                                <button class="wizard-option" data-value="经济实惠">经济实惠 Budget-friendly</button>
+                                <button class="wizard-option" data-value="中等价位">中等价位 Mid-range</button>
+                                <button class="wizard-option" data-value="高端产品">高端产品 Premium</button>
+                            </div>
+                        </div>
+                        <div class="wizard-step" data-step="4">
+                            <h3>需要特殊功能吗？</h3>
+                            <div class="wizard-options">
+                                <button class="wizard-option" data-value="防水">防水 Waterproof</button>
+                                <button class="wizard-option" data-value="隐形">隐形 Invisible</button>
+                                <button class="wizard-option" data-value="装饰性">装饰性 Decorative</button>
+                                <button class="wizard-option" data-value="超强耐用">超强耐用 Heavy Duty</button>
+                                <button class="wizard-option" data-value="无特殊要求">无特殊要求 No Special Requirements</button>
+                            </div>
+                        </div>
+                        <div class="wizard-results" id="wizardResults" style="display: none;">
+                            <h3>推荐拉链 | Recommended Zippers</h3>
+                            <div class="recommendations" id="recommendations"></div>
+                            <button class="btn btn--secondary" onclick="resetWizard()">重新开始 Start Over</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal for detailed zipper information -->
+    <div class="modal" id="zipperModal">
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
