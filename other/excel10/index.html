@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel函数应用初级培训：10题实战演练</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="app-title">Excel函数应用初级培训</h1>
+                <p class="app-subtitle">10题实战演练</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <span class="progress-text" id="progressText">进度: 0/10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 主页面：题目列表 -->
+        <div id="homePage" class="page active">
+            <div class="container">
+                <div class="problems-grid">
+                    <!-- 题目卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 题目详情页面 -->
+        <div id="problemPage" class="page">
+            <div class="container">
+                <div class="problem-header">
+                    <button class="btn btn--secondary" id="backBtn">← 返回主页</button>
+                    <div class="problem-nav">
+                        <button class="btn btn--outline" id="prevBtn">上一题</button>
+                        <button class="btn btn--outline" id="nextBtn">下一题</button>
+                    </div>
+                </div>
+
+                <div class="problem-content">
+                    <div class="problem-info">
+                        <h2 class="problem-title" id="problemTitle"></h2>
+                        <p class="problem-subtitle" id="problemSubtitle"></p>
+                        <div class="problem-meta">
+                            <span class="topic-tag" id="problemTopic"></span>
+                        </div>
+                    </div>
+
+                    <div class="content-layout">
+                        <div class="left-panel">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>题目描述</h3>
+                                </div>
+                                <div class="card__body">
+                                    <p id="problemQuestion"></p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>标准答案</h3>
+                                </div>
+                                <div class="card__body">
+                                    <div class="answer-box">
+                                        <code id="problemAnswer"></code>
+                                        <button class="btn btn--sm copy-btn" onclick="copyAnswer()">复制</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>关键概念</h3>
+                                </div>
+                                <div class="card__body">
+                                    <div class="concepts-list" id="conceptsList"></div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="examplesCard" style="display: none;">
+                                <div class="card__header">
+                                    <h3>示例数据</h3>
+                                </div>
+                                <div class="card__body">
+                                    <div id="examplesContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right-panel">
+                            <div class="card excel-simulator">
+                                <div class="card__header">
+                                    <h3>交互式Excel模拟器</h3>
+                                    <div class="simulator-controls">
+                                        <button class="btn btn--sm" onclick="resetSimulator()">重置</button>
+                                        <button class="btn btn--sm btn--primary" onclick="showHint()">提示</button>
+                                    </div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="excel-grid" id="excelGrid"></div>
+                                    <div class="formula-bar">
+                                        <label>公式栏：</label>
+                                        <input type="text" id="formulaInput" placeholder="在此输入公式...">
+                                        <button class="btn btn--primary" onclick="executeFormula()">执行</button>
+                                    </div>
+                                    <div class="result-display" id="resultDisplay"></div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="functionDemo">
+                                <div class="card__header">
+                                    <h3>函数演示</h3>
+                                </div>
+                                <div class="card__body">
+                                    <div id="demoContent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 提示弹窗 -->
+    <div id="hintModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>提示</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="hintText"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功提示 -->
+    <div id="successToast" class="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message">公式正确！</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
