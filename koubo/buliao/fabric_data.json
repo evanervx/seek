@@ -1,0 +1,93 @@
+[
+  {
+    "fabric_name": "Silk Chiffon",
+    "difficulty_level": "Very High",
+    "main_problems": "极度光滑，容易脱线，难以裁剪和缝制，需要法式包缝。",
+    "why_avoid_as_beginner": "需要法式包缝、衬纸支撑和精准处理等高级技巧。",
+    "beginner_alternatives": "棉府绸或棉麻布"
+  },
+  {
+    "fabric_name": "Silk/Rayon Charmeuse",
+    "difficulty_level": "Very High",
+    "main_problems": "非常光滑，贴身，难以处理和裁剪。",
+    "why_avoid_as_beginner": "对于初学者来说太滑难以控制，容易因失误而损坏。",
+    "beginner_alternatives": "棉贡缎或反面绉缎"
+  },
+  {
+    "fabric_name": "Satin",
+    "difficulty_level": "High",
+    "main_problems": "光滑，会留下针孔，容易起皱，贴身。",
+    "why_avoid_as_beginner": "会显现出每一个瑕疵，用错线或针会导致面料轻易起皱。",
+    "beginner_alternatives": "棉贡缎或抛光棉"
+  },
+  {
+    "fabric_name": "Velvet",
+    "difficulty_level": "High",
+    "main_problems": "绒毛光滑，需要考虑绒毛的走向，缝制时会移动，需要特殊熨烫",
+    "why_avoid_as_beginner": "绒毛的走向对外观至关重要，绒毛容易被卷入缝纫机，需要经验。",
+    "beginner_alternatives": "平绒（棉质天鹅绒）或灯芯绒"
+  },
+  {
+    "fabric_name": "Faux Fur",
+    "difficulty_level": "Very High",
+    "main_problems": "掉毛多、场面混乱，缝份厚重，难以看清标记，需要特殊裁剪工具。",
+    "why_avoid_as_beginner": "会弄得一团糟，厚重的缝份会对基础缝纫机造成压力，需要特殊的裁剪工具。",
+    "beginner_alternatives": "摇粒绒或Minky面料"
+  },
+  {
+    "fabric_name": "Leather/Vinyl",
+    "difficulty_level": "Very High",
+    "main_problems": "厚重且没有容错空间，容易断针，没有犯错余地，需要特殊压脚。",
+    "why_avoid_as_beginner": "这种材料没有容错空间——针孔是永久性的，需要重型设备。",
+    "beginner_alternatives": "重磅棉帆布或厚棉布"
+  },
+  {
+    "fabric_name": "Sequined/Beaded Fabrics",
+    "difficulty_level": "Very High",
+    "main_problems": "必须移除缝份上的亮片/珠子，容易断针，不能直接熨烫。",
+    "why_avoid_as_beginner": "准备工作耗时，有弄断昂贵的针和损坏机器的风险。",
+    "beginner_alternatives": "带有装饰性明线的素色棉布"
+  },
+  {
+    "fabric_name": "Jersey Knits",
+    "difficulty_level": "Medium-High",
+    "main_problems": "边缘卷曲，容易拉伸变形，难以精确裁剪。",
+    "why_avoid_as_beginner": "边缘卷曲使得卷边困难，裁剪时会发生不可预测的拉伸。",
+    "beginner_alternatives": "罗马布或稳定的棉针织布"
+  },
+  {
+    "fabric_name": "Stretch/Spandex Fabrics",
+    "difficulty_level": "Medium-High",
+    "main_problems": "需要使用弹性线迹，接缝容易崩开，需要复杂的计算。",
+    "why_avoid_as_beginner": "需要了解拉伸比和使用特殊的线迹/针。",
+    "beginner_alternatives": "含2%氨纶的棉混纺面料"
+  },
+  {
+    "fabric_name": "Organza",
+    "difficulty_level": "High",
+    "main_problems": "非常薄且易滑动，难以保持平直，需要衬纸支撑。",
+    "why_avoid_as_beginner": "太过娇贵和易于滑动，对初学者来说处理起来很麻烦。",
+    "beginner_alternatives": "棉麻布或细棉布"
+  },
+  {
+    "fabric_name": "Tulle",
+    "difficulty_level": "Medium",
+    "main_problems": "重量轻且容易钩住，难以裁剪出直线。",
+    "why_avoid_as_beginner": "容易撕裂，难以获得干净的切口和接缝。",
+    "beginner_alternatives": "棉网布或轻质棉布"
+  },
+  {
+    "fabric_name": "Lace",
+    "difficulty_level": "High",
+    "main_problems": "开放式编织结构，需要特殊的接缝技术，需要精细处理。",
+    "why_avoid_as_beginner": "需要复杂的制作方法，缝制过程中容易被钩住。",
+    "beginner_alternatives": "鸡眼棉布或绣花棉布"
+  },
+  {
+    "fabric_name": "Bias Cut Fabrics",
+    "difficulty_level": "High",
+    "main_problems": "容易拉伸和变形，需要假缝固定，排版复杂。",
+    "why_avoid_as_beginner": "需要高级的排版技巧和稳定技术。",
+    "beginner_alternatives": "直纹棉布或亚麻布"
+  }
+]
