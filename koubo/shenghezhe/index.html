@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装制作中的省与褶 - 专业指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>省与褶指南</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#darts" class="nav-link">省 (Darts)</a></li>
+                <li><a href="#pleats" class="nav-link">褶 (Pleats)</a></li>
+                <li><a href="#comparison" class="nav-link">对比</a></li>
+                <li><a href="#terminology" class="nav-link">术语</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 首页 -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>服装制作中的省与褶</h1>
+                        <p class="hero-subtitle">掌握服装设计的核心技巧，创造完美贴身的服装</p>
+                        <div class="hero-cards">
+                            <div class="hero-card">
+                                <div class="hero-card-icon">📐</div>
+                                <h3>省 (Darts)</h3>
+                                <p>通过三角形楔形减少面料，使平面布料贴合身体曲线</p>
+                            </div>
+                            <div class="hero-card">
+                                <div class="hero-card-icon">🌊</div>
+                                <h3>褶 (Pleats)</h3>
+                                <p>通过折叠增加面料丰满度，提供活动空间和装饰效果</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 省 -->
+        <section id="darts" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>省 (Darts) - 贴身塑形的关键</h2>
+                    <p>省道是服装设计中用于创造贴身效果的重要技巧，通过去除多余面料来贴合身体曲线。</p>
+                    <div class="search-filter">
+                        <input type="text" id="dart-search" placeholder="搜索省的类型..." class="search-input">
+                        <select id="dart-filter" class="filter-select">
+                            <option value="">所有难度</option>
+                            <option value="初级">初级</option>
+                            <option value="中级">中级</option>
+                            <option value="高级">高级</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cards-grid" id="darts-grid">
+                    <!-- 省的卡片将通过 JavaScript 动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 褶 -->
+        <section id="pleats" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>褶 (Pleats) - 优雅的装饰与功能</h2>
+                    <p>褶皱不仅提供装饰效果，还能增加服装的活动空间，是时尚设计中的经典元素。</p>
+                    <div class="search-filter">
+                        <input type="text" id="pleat-search" placeholder="搜索褶的类型..." class="search-input">
+                        <select id="pleat-filter" class="filter-select">
+                            <option value="">所有难度</option>
+                            <option value="初级">初级</option>
+                            <option value="中级">中级</option>
+                            <option value="高级">高级</option>
+                            <option value="专业">专业</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cards-grid" id="pleats-grid">
+                    <!-- 褶的卡片将通过 JavaScript 动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 对比 -->
+        <section id="comparison" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>省与褶的详细对比</h2>
+                    <p>了解省和褶的区别，选择最适合您设计需求的技巧。</p>
+                </div>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>特征</th>
+                                <th>省 (Darts)</th>
+                                <th>褶 (Pleats)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-tbody">
+                            <!-- 对比数据将通过 JavaScript 动态生成 -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749742748/pplx_project_search_images/9405955af57b99fa62e636acfb6803a8b3b5b731.jpg" alt="省的基本位置图" />
+                        <p>省的基本位置示意图</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749742748/pplx_project_search_images/2854bd6e62187f172ee443b10467bc3f808bdbc1.jpg" alt="褶的类型图" />
+                        <p>常见褶皱类型图解</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 术语 -->
+        <section id="terminology" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>专业术语解释</h2>
+                    <p>掌握专业术语，提升您的服装设计专业水平。</p>
+                </div>
+                <div class="terminology-grid">
+                    <div class="terminology-group">
+                        <h3>省的组成部分</h3>
+                        <div class="terminology-cards">
+                            <div class="terminology-card">
+                                <h4>省尖 (Dart Point/Apex)</h4>
+                                <p>省道的尖端，指向身体最丰满的部位</p>
+                            </div>
+                            <div class="terminology-card">
+                                <h4>省道线 (Dart Legs)</h4>
+                                <p>省道的两条线，缝合时将它们对齐</p>
+                            </div>
+                            <div class="terminology-card">
+                                <h4>省道底 (Dart Base)</h4>
+                                <p>省道的宽端，通常在接缝处</p>
+                            </div>
+                        </div>
+                        <div class="terminology-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749742747/pplx_project_search_images/d886e49c76344247473e1fc8786163a4a8f765d1.jpg" alt="省的结构图" />
+                        </div>
+                    </div>
+                    <div class="terminology-group">
+                        <h3>褶的组成部分</h3>
+                        <div class="terminology-cards">
+                            <div class="terminology-card">
+                                <h4>褶深 (Pleat Depth)</h4>
+                                <p>从外折痕到内折痕的距离</p>
+                            </div>
+                            <div class="terminology-card">
+                                <h4>褶底 (Pleat Underlay)</h4>
+                                <p>折叠在下面的布料部分，总是褶深的两倍</p>
+                            </div>
+                            <div class="terminology-card">
+                                <h4>褶间距 (Pleat Spacing)</h4>
+                                <p>褶皱之间的距离</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 卡片详情模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <div class="modal-info">
+                    <div class="modal-detail">
+                        <strong>英文名称:</strong>
+                        <span id="modal-english"></span>
+                    </div>
+                    <div class="modal-detail">
+                        <strong>描述:</strong>
+                        <p id="modal-description"></p>
+                    </div>
+                    <div class="modal-detail">
+                        <strong>主要用途:</strong>
+                        <p id="modal-usage"></p>
+                    </div>
+                    <div class="modal-detail">
+                        <strong>难度等级:</strong>
+                        <span id="modal-difficulty" class="difficulty-badge"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
