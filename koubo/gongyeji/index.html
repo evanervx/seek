@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缝纫小白购机指南：工业机还是家用机？</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">缝纫小白购机指南：工业机还是家用机？</h1>
+                <p class="hero-subtitle">基于专业分析，为您提供量身定制的购机建议</p>
+                <button class="btn btn--primary btn--lg" onclick="scrollToSection('decision-tool')">
+                    <i class="fas fa-play-circle"></i> 开始选择指南
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Decision Tool -->
+    <section id="decision-tool" class="decision-tool">
+        <div class="container">
+            <h2>智能选择助手</h2>
+            <p class="section-subtitle">回答几个简单问题，获得个性化推荐</p>
+            
+            <div class="decision-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    问题 <span id="current-question">1</span> / <span id="total-questions">5</span>
+                </div>
+
+                <div class="question-card" id="question-card">
+                    <h3 id="question-text"></h3>
+                    <div class="options-container" id="options-container"></div>
+                    <div class="navigation-buttons">
+                        <button class="btn btn--secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                            <i class="fas fa-arrow-left"></i> 上一题
+                        </button>
+                        <button class="btn btn--primary" id="next-btn" onclick="nextQuestion()" disabled>
+                            下一题 <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-card hidden" id="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 id="result-title"></h3>
+                    <p id="result-description"></p>
+                    <div class="result-actions">
+                        <button class="btn btn--primary" onclick="scrollToSection('comparison')">
+                            查看详细对比
+                        </button>
+                        <button class="btn btn--secondary" onclick="restartQuiz()">
+                            重新测试
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2>工业机 vs 家用机 全面对比</h2>
+            <p class="section-subtitle">了解两种机器的详细差异，做出明智选择</p>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特性</th>
+                            <th class="industrial-col">
+                                <i class="fas fa-industry" style="margin-right: 8px; font-size: 1.2em;"></i> 工业缝纫机
+                            </th>
+                            <th class="domestic-col">
+                                <i class="fas fa-home" style="margin-right: 8px; font-size: 1.2em;"></i> 家用缝纫机
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparison-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decision Tree Chart -->
+    <section class="decision-chart">
+        <div class="container">
+            <h2>决策流程图</h2>
+            <p class="section-subtitle">可视化决策过程，更直观地了解选择逻辑</p>
+            <div class="chart-container">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749742532/pplx_code_interpreter/974af080_qkyx9v.jpg" alt="缝纫机决策树" class="decision-tree-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Analysis Section -->
+    <section id="cost-analysis" class="cost-analysis">
+        <div class="container">
+            <h2>成本分析工具</h2>
+            <p class="section-subtitle">计算5年总拥有成本，评估投资价值</p>
+            
+            <div class="cost-calculator">
+                <div class="calculator-controls">
+                    <div class="form-group">
+                        <label class="form-label">初始预算 (元)</label>
+                        <input type="range" id="budget-slider" min="500" max="15000" value="3000" class="slider">
+                        <div class="slider-value">¥<span id="budget-value">3000</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">使用频率</label>
+                        <select id="usage-frequency" class="form-control">
+                            <option value="occasional">偶尔使用</option>
+                            <option value="weekly">每周使用</option>
+                            <option value="daily">每日使用</option>
+                            <option value="professional">专业使用</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="cost-results">
+                    <div class="cost-card">
+                        <h4>家用缝纫机</h4>
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <span>初始成本:</span>
+                                <span id="domestic-initial">¥2,000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>5年维护:</span>
+                                <span id="domestic-maintenance">¥300</span>
+                            </div>
+                            <div class="cost-total">
+                                <span>总成本:</span>
+                                <span id="domestic-total">¥2,300</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cost-card">
+                        <h4>工业缝纫机</h4>
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <span>初始成本:</span>
+                                <span id="industrial-initial">¥6,000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>5年维护:</span>
+                                <span id="industrial-maintenance">¥1,500</span>
+                            </div>
+                            <div class="cost-total">
+                                <span>总成本:</span>
+                                <span id="industrial-total">¥7,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749742586/pplx_code_interpreter/b223a6fe_pnqas4.jpg" alt="成本分析图表" class="cost-chart-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Advice Section -->
+    <section id="expert-advice" class="expert-advice">
+        <div class="container">
+            <h2>专家建议</h2>
+            <p class="section-subtitle">避免常见误区，获得专业指导</p>
+            
+            <div class="advice-grid">
+                <div class="advice-column">
+                    <h3><i class="fas fa-lightbulb"></i> 新手建议</h3>
+                    <div class="accordion" id="beginner-tips">
+                    </div>
+                </div>
+                
+                <div class="advice-column">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 常见误区</h3>
+                    <div class="accordion" id="common-mistakes">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buying Checklist -->
+    <section id="buying-checklist" class="buying-checklist">
+        <div class="container">
+            <h2>购买清单</h2>
+            <p class="section-subtitle">系统化检查所有重要因素，确保明智决策</p>
+            
+            <div class="checklist-grid">
+                <div class="checklist-category">
+                    <h3><i class="fas fa-wallet"></i> 预算考虑</h3>
+                    <div class="checklist-items" id="budget-checklist"></div>
+                </div>
+                
+                <div class="checklist-category">
+                    <h3><i class="fas fa-user-graduate"></i> 技能评估</h3>
+                    <div class="checklist-items" id="skills-checklist"></div>
+                </div>
+                
+                <div class="checklist-category">
+                    <h3><i class="fas fa-home"></i> 空间要求</h3>
+                    <div class="checklist-items" id="space-checklist"></div>
+                </div>
+                
+                <div class="checklist-category">
+                    <h3><i class="fas fa-cogs"></i> 功能需求</h3>
+                    <div class="checklist-items" id="features-checklist"></div>
+                </div>
+            </div>
+            
+            <div class="checklist-actions">
+                <button class="btn btn--primary" onclick="downloadChecklist()">
+                    <i class="fas fa-download"></i> 下载清单
+                </button>
+                <button class="btn btn--secondary" onclick="resetChecklist()">
+                    <i class="fas fa-refresh"></i> 重置清单
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Machines -->
+    <section id="recommended-machines" class="recommended-machines">
+        <div class="container">
+            <h2>推荐机型</h2>
+            <p class="section-subtitle">根据不同需求精选的优质缝纫机</p>
+            
+            <div class="machine-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="beginner">新手推荐</button>
+                    <button class="tab-btn" data-category="intermediate">中级推荐</button>
+                    <button class="tab-btn" data-category="industrial">工业入门</button>
+                </div>
+                
+                <div class="machines-grid" id="machines-grid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Menu -->
+    <nav class="quick-nav">
+        <div class="nav-container">
+            <button class="nav-btn" onclick="scrollToSection('decision-tool')" title="决策工具">
+                <i class="fas fa-question-circle"></i>
+            </button>
+            <button class="nav-btn" onclick="scrollToSection('comparison')" title="机器对比">
+                <i class="fas fa-balance-scale"></i>
+            </button>
+            <button class="nav-btn" onclick="scrollToSection('cost-analysis')" title="成本分析">
+                <i class="fas fa-calculator"></i>
+            </button>
+            <button class="nav-btn" onclick="scrollToSection('expert-advice')" title="专家建议">
+                <i class="fas fa-user-tie"></i>
+            </button>
+            <button class="nav-btn" onclick="scrollToSection('buying-checklist')" title="购买清单">
+                <i class="fas fa-check-square"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 缝纫购机指南. 专业的缝纫机选择建议，助您找到完美的缝纫伙伴。</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
