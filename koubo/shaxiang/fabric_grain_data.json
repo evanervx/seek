@@ -1,0 +1,135 @@
+{
+  "fabric_structure": {
+    "warp": {
+      "chinese_name": "经纱",
+      "english_name": "Warp",
+      "direction": "Lengthwise, parallel to selvage",
+      "properties": {
+        "strength": "Highest",
+        "stretch": "Lowest (1-2%)",
+        "stability": "Most stable",
+        "twist": "Higher twist",
+        "tension": "Under high tension during weaving"
+      },
+      "characteristics": [
+        "Stronger and more tightly twisted",
+        "Provides structural framework",
+        "Least likely to stretch out of shape",
+        "Held stationary during weaving process"
+      ]
+    },
+    "weft": {
+      "chinese_name": "纬纱",
+      "english_name": "Weft",
+      "direction": "Crosswise, perpendicular to selvage",
+      "properties": {
+        "strength": "Lower than warp",
+        "stretch": "Higher (3-5%)",
+        "stability": "Moderate",
+        "twist": "Lower twist",
+        "tension": "Less tension during weaving"
+      },
+      "characteristics": [
+        "More loosely twisted than warp",
+        "Woven over and under warp threads",
+        "Allows more stretch and flexibility",
+        "Coarser fibers, less evenly spun"
+      ]
+    },
+    "bias": {
+      "chinese_name": "斜纹",
+      "english_name": "Bias",
+      "direction": "45 degrees to warp and weft",
+      "properties": {
+        "strength": "Lowest",
+        "stretch": "Highest (up to 20%)",
+        "stability": "Least stable",
+        "drape": "Excellent",
+        "conformability": "Best for curves"
+      },
+      "characteristics": [
+        "Maximum stretch and flexibility",
+        "Natural draping properties",
+        "Conforms to body curves",
+        "Requires special handling techniques"
+      ]
+    }
+  },
+  "cutting_consequences": {
+    "correct_grain": {
+      "benefits": [
+        "Proper garment hang and drape",
+        "Seams lie flat and straight",
+        "Consistent fit across sizes",
+        "Durability and shape retention",
+        "Professional appearance",
+        "Optimal stretch placement"
+      ]
+    },
+    "incorrect_grain": {
+      "problems": [
+        {
+          "issue": "Twisted seams",
+          "description": "Seams spiral around the body instead of lying straight",
+          "cause": "Different grain directions fighting each other"
+        },
+        {
+          "issue": "Poor drape",
+          "description": "Garment hangs awkwardly or doesn't flow naturally",
+          "cause": "Stretch and stability in wrong directions"
+        },
+        {
+          "issue": "Uneven shrinkage",
+          "description": "Garment distorts during washing",
+          "cause": "Different shrinkage rates in warp vs weft"
+        },
+        {
+          "issue": "Premature wear",
+          "description": "Fabric breaks down faster at stress points",
+          "cause": "Weaker direction bearing load"
+        },
+        {
+          "issue": "Visual distortion",
+          "description": "Stripes, plaids, or prints look crooked",
+          "cause": "Pattern not aligned with grain structure"
+        }
+      ]
+    }
+  },
+  "identification_methods": [
+    {
+      "method": "Selvage identification",
+      "description": "Look for finished edges with manufacturer info",
+      "reliability": "Most reliable"
+    },
+    {
+      "method": "Stretch test",
+      "description": "Pull fabric - less stretch = warp direction",
+      "reliability": "Good for most fabrics"
+    },
+    {
+      "method": "Tear test",
+      "description": "Fabric tears straighter along grain lines",
+      "reliability": "Good for plain weaves"
+    },
+    {
+      "method": "Sound test",
+      "description": "Warp makes higher pitch when 'twanged'",
+      "reliability": "Works for some fabrics"
+    }
+  ],
+  "industry_applications": {
+    "pattern_making": "Grainlines marked on all pattern pieces",
+    "commercial_cutting": "Multiple layers aligned precisely",
+    "quality_control": "Inspectors check grain alignment",
+    "manufacturing": "Affects productivity and waste reduction"
+  },
+  "best_practices": [
+    "Always identify selvage first",
+    "Measure from both ends of grainline arrow to selvage",
+    "Pin pattern at grainline ends before cutting",
+    "Use sharp tools to avoid pulling fabric off-grain",
+    "Check grain alignment frequently during layout",
+    "Consider fabric nap and directional prints"
+  ]
+}
