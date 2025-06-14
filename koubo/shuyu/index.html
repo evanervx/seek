@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缝纫圈子必懂的专业术语</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header__content">
+                <h1 class="header__title">缝纫圈子必懂的专业术语</h1>
+                <p class="header__subtitle">Essential Sewing Terms for Every Seamstress</p>
+                <div class="header__pattern"></div>
+            </div>
+        </header>
+
+        <!-- Statistics Section -->
+        <section class="stats">
+            <div class="stats__grid">
+                <div class="stat-card">
+                    <div class="stat-card__number" id="total-terms">120</div>
+                    <div class="stat-card__label">专业术语</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__number" id="total-categories">8</div>
+                    <div class="stat-card__label">分类目录</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__number" id="filtered-terms">120</div>
+                    <div class="stat-card__label">当前显示</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="controls">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="form-control search-input" 
+                    placeholder="搜索术语... (支持中英文搜索)"
+                    autocomplete="off"
+                >
+                <div class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="btn btn--category active" data-category="all">
+                    全部术语
+                </button>
+                <button class="btn btn--category" data-category="基础缝纫工具和设备">
+                    基础工具
+                </button>
+                <button class="btn btn--category" data-category="面料和纹理术语">
+                    面料纹理
+                </button>
+                <button class="btn btn--category" data-category="缝纫技术和针法">
+                    缝纫技术
+                </button>
+                <button class="btn btn--category" data-category="版型制作术语">
+                    版型制作
+                </button>
+                <button class="btn btn--category" data-category="服装构造术语">
+                    服装构造
+                </button>
+                <button class="btn btn--category" data-category="装饰技术">
+                    装饰技术
+                </button>
+                <button class="btn btn--category" data-category="质量控制和整理">
+                    质量控制
+                </button>
+                <button class="btn btn--category" data-category="现代缝纫技术">
+                    现代技术
+                </button>
+            </div>
+        </section>
+
+        <!-- Terms Grid -->
+        <section class="terms-section">
+            <div class="terms-grid" id="terms-grid">
+                <!-- Terms will be dynamically inserted here -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div class="no-results hidden" id="no-results">
+                <div class="no-results__icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <h3>没有找到相关术语</h3>
+                <p>请尝试其他关键词或选择不同的分类</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__content">
+                <p>&copy; 2025 缝纫圈子专业术语大全 | 学习缝纫，从专业术语开始</p>
+                <div class="footer__links">
+                    <a href="#" target="_blank">更多缝纫资源</a>
+                    <a href="#" target="_blank">在线社区</a>
+                    <a href="#" target="_blank">视频教程</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
