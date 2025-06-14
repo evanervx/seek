@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弧线缝制剪牙口技术详解</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">弧线缝制剪牙口技术详解</h1>
+            <p class="header__subtitle">为什么弧线缝好后一定要剪牙口</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="intro-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>技术概述</h2>
+                        <p>剪牙口是缝纫中处理弧线缝份的重要技术，通过在缝份上剪小口或挖小三角，使弧线缝制后能够平整贴合。这项技术确保了弧线缝制的专业外观和舒适穿着体验。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>为什么必须剪牙口？</h2>
+                        <p>弧线缝制时，缝份的外边缘长度与缝线长度不同。翻转后需要重新分配空间，否则会产生褶皱或厚重感。</p>
+                        
+                        <div class="visual-demo">
+                            <div class="demo-container">
+                                <div class="fabric-demo" id="fabricDemo">
+                                    <div class="seam-line"></div>
+                                    <div class="seam-allowance" id="seamAllowance">
+                                        <div class="clip" style="left: 20%"></div>
+                                        <div class="clip" style="left: 40%"></div>
+                                        <div class="clip" style="left: 60%"></div>
+                                        <div class="clip" style="left: 80%"></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--primary demo-btn" onclick="toggleDemo()">查看翻转效果</button>
+                            </div>
+                        </div>
+
+                        <div class="reasons-grid">
+                            <div class="reason-item">
+                                <div class="reason-icon">✂️</div>
+                                <h4>消除张力</h4>
+                                <p>消除缝线处的拉力和张力</p>
+                            </div>
+                            <div class="reason-item">
+                                <div class="reason-icon">📏</div>
+                                <h4>平整贴合</h4>
+                                <p>确保弧线平整贴合</p>
+                            </div>
+                            <div class="reason-item">
+                                <div class="reason-icon">🎯</div>
+                                <h4>减少厚度</h4>
+                                <p>减少缝份厚度</p>
+                            </div>
+                            <div class="reason-item">
+                                <div class="reason-icon">⭐</div>
+                                <h4>提升质量</h4>
+                                <p>提高成品外观质量</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="curves-section">
+                <div class="curves-grid">
+                    <div class="card curve-card">
+                        <div class="card__body">
+                            <h3>凹弧线处理 - 剪口法</h3>
+                            <div class="curve-visual concave-curve">
+                                <div class="curve-line"></div>
+                                <div class="clips-demo">
+                                    <div class="straight-clip" style="left: 15%"></div>
+                                    <div class="straight-clip" style="left: 35%"></div>
+                                    <div class="straight-clip" style="left: 55%"></div>
+                                    <div class="straight-clip" style="left: 75%"></div>
+                                </div>
+                            </div>
+                            <p><strong>特征：</strong>向内弯曲如山谷状，常见于领口、袖窿、腋下缝线</p>
+                            <p><strong>方法：</strong>剪直口让缝份展开</p>
+                            
+                            <div class="steps">
+                                <h4>操作步骤：</h4>
+                                <ol>
+                                    <li>使用剪刀尖在缝份上垂直剪小口</li>
+                                    <li>间距约1.25-1.5厘米</li>
+                                    <li>剪至缝线附近但不要剪断缝线</li>
+                                    <li>剪口后缝份可以展开摊平</li>
+                                </ol>
+                            </div>
+
+                            <div class="image-example">
+                                <img src="https://i0.wp.com/sweetbriarsisters.com/wp-content/uploads/2014/03/sewing-curves.jpg?ssl=1" alt="凹弧线剪口效果对比" class="technique-image">
+                                <p class="image-caption">剪口前后效果对比：底部显示正确剪口后的平整效果</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card curve-card">
+                        <div class="card__body">
+                            <h3>凸弧线处理 - 挖口法</h3>
+                            <div class="curve-visual convex-curve">
+                                <div class="curve-line"></div>
+                                <div class="notches-demo">
+                                    <div class="triangle-notch" style="left: 15%"></div>
+                                    <div class="triangle-notch" style="left: 35%"></div>
+                                    <div class="triangle-notch" style="left: 55%"></div>
+                                    <div class="triangle-notch" style="left: 75%"></div>
+                                </div>
+                            </div>
+                            <p><strong>特征：</strong>向外弯曲如小山状，常见于公主线胸部造型、扇贝边、圆形下摆</p>
+                            <p><strong>方法：</strong>剪去小三角形减少堆叠</p>
+                            
+                            <div class="steps">
+                                <h4>操作步骤：</h4>
+                                <ol>
+                                    <li>用剪刀剪出小三角形</li>
+                                    <li>每隔1.25-1.5厘米剪一个</li>
+                                    <li>剪至缝线附近但不要剪断缝线</li>
+                                    <li>去除多余布料减少厚重感</li>
+                                </ol>
+                            </div>
+
+                            <div class="image-example">
+                                <img src="https://pplx-res.cloudinary.com/image/upload/v1749799678/pplx_project_search_images/cd5fc4ef6454c5d1110ea7ebde8d5c92de3a65a2.jpg" alt="凸弧线挖口技术" class="technique-image">
+                                <p class="image-caption">凸弧线上的小三角挖口，防止翻转后堆叠</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="techniques-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>操作要点与技巧</h2>
+                        
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <h4>剪切距离</h4>
+                                <p>剪至距离缝线1-2毫米处，确保不剪断缝线</p>
+                            </div>
+                            <div class="tip-card">
+                                <h4>间距控制</h4>
+                                <p>弧度越大，剪口间距越密，通常1.25-1.5厘米</p>
+                            </div>
+                            <div class="tip-card">
+                                <h4>工具选择</h4>
+                                <p>使用锋利的剪刀尖或专用鸭嘴剪</p>
+                            </div>
+                            <div class="tip-card">
+                                <h4>安全原则</h4>
+                                <p>绝不能剪断缝线，保持足够安全距离</p>
+                            </div>
+                        </div>
+
+                        <div class="alternatives">
+                            <h4>替代技术：</h4>
+                            <ul>
+                                <li>锯齿剪刀处理</li>
+                                <li>将缝份修剪至0.3厘米</li>
+                                <li>分层修剪技术</li>
+                            </ul>
+                        </div>
+
+                        <div class="image-example">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749878675/pplx_project_search_images/e458d44157c409a01c8a119369e402760fecec92.jpg" alt="专业剪切工具" class="technique-image">
+                            <p class="image-caption">使用专用鸭嘴剪进行精确剪切</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="applications-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>常见应用场景</h2>
+                        <div class="applications-grid">
+                            <div class="application-item">
+                                <span class="application-icon">👔</span>
+                                <span>服装制作中的领口处理</span>
+                            </div>
+                            <div class="application-item">
+                                <span class="application-icon">👕</span>
+                                <span>袖窿和腋下缝线</span>
+                            </div>
+                            <div class="application-item">
+                                <span class="application-icon">👗</span>
+                                <span>公主线和造型线</span>
+                            </div>
+                            <div class="application-item">
+                                <span class="application-icon">🎒</span>
+                                <span>弧形口袋</span>
+                            </div>
+                            <div class="application-item">
+                                <span class="application-icon">✂️</span>
+                                <span>圆形下摆</span>
+                            </div>
+                            <div class="application-item">
+                                <span class="application-icon">🧸</span>
+                                <span>玩具制作中的弧形缝合</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 弧线缝制技术指南 - 专业缝纫知识分享</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
