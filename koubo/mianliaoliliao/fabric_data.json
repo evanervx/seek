@@ -1,0 +1,350 @@
+{
+  "fabric_types": [
+    {
+      "name": "Cotton",
+      "category": "Natural Fiber",
+      "properties": [
+        "Breathable",
+        "Absorbent",
+        "Soft",
+        "Durable"
+      ],
+      "applications": [
+        "T-shirts",
+        "Bed sheets",
+        "Casual wear",
+        "Undergarments"
+      ],
+      "pros": [
+        "Comfortable",
+        "Natural",
+        "Machine washable",
+        "Hypoallergenic"
+      ],
+      "cons": [
+        "Wrinkles easily",
+        "Shrinks",
+        "Not quick-drying"
+      ]
+    },
+    {
+      "name": "Silk",
+      "category": "Natural Fiber",
+      "properties": [
+        "Lustrous",
+        "Smooth",
+        "Strong",
+        "Lightweight"
+      ],
+      "applications": [
+        "Formal wear",
+        "Lingerie",
+        "Scarves",
+        "Linings"
+      ],
+      "pros": [
+        "Luxurious feel",
+        "Natural sheen",
+        "Temperature regulating"
+      ],
+      "cons": [
+        "Expensive",
+        "Delicate",
+        "Requires special care"
+      ]
+    },
+    {
+      "name": "Wool",
+      "category": "Natural Fiber",
+      "properties": [
+        "Warm",
+        "Elastic",
+        "Moisture-wicking",
+        "Resilient"
+      ],
+      "applications": [
+        "Sweaters",
+        "Coats",
+        "Suits",
+        "Blankets"
+      ],
+      "pros": [
+        "Excellent insulation",
+        "Natural",
+        "Flame resistant"
+      ],
+      "cons": [
+        "Can be itchy",
+        "Expensive",
+        "Requires careful washing"
+      ]
+    },
+    {
+      "name": "Linen",
+      "category": "Natural Fiber",
+      "properties": [
+        "Cool",
+        "Absorbent",
+        "Strong",
+        "Breathable"
+      ],
+      "applications": [
+        "Summer clothing",
+        "Tablecloths",
+        "Curtains",
+        "Casual wear"
+      ],
+      "pros": [
+        "Very breathable",
+        "Gets softer with wash",
+        "Durable"
+      ],
+      "cons": [
+        "Wrinkles easily",
+        "Can be stiff initially"
+      ]
+    },
+    {
+      "name": "Polyester",
+      "category": "Synthetic Fiber",
+      "properties": [
+        "Wrinkle-resistant",
+        "Quick-drying",
+        "Durable",
+        "Color-fast"
+      ],
+      "applications": [
+        "Sportswear",
+        "Work uniforms",
+        "Blended fabrics",
+        "Outdoor gear"
+      ],
+      "pros": [
+        "Low maintenance",
+        "Affordable",
+        "Strong"
+      ],
+      "cons": [
+        "Not breathable",
+        "Can retain odors",
+        "Not eco-friendly"
+      ]
+    },
+    {
+      "name": "Nylon",
+      "category": "Synthetic Fiber",
+      "properties": [
+        "Strong",
+        "Elastic",
+        "Lightweight",
+        "Quick-drying"
+      ],
+      "applications": [
+        "Hosiery",
+        "Activewear",
+        "Swimwear",
+        "Outerwear"
+      ],
+      "pros": [
+        "Very strong",
+        "Elastic",
+        "Mold resistant"
+      ],
+      "cons": [
+        "Can be uncomfortable",
+        "Static prone",
+        "Heat sensitive"
+      ]
+    }
+  ],
+  "lining_types": [
+    {
+      "name": "Silk Habotai",
+      "material": "100% Silk",
+      "weight": "Lightweight",
+      "applications": [
+        "Delicate garments",
+        "Summer clothing",
+        "Lightweight jackets"
+      ],
+      "properties": [
+        "Smooth",
+        "Breathable",
+        "Luxurious feel",
+        "Semi-sheer"
+      ],
+      "pros": [
+        "Premium quality",
+        "Comfortable",
+        "Natural"
+      ],
+      "cons": [
+        "Expensive",
+        "Delicate",
+        "Not very durable"
+      ]
+    },
+    {
+      "name": "Bemberg/Cupro",
+      "material": "Regenerated Cellulose",
+      "weight": "Lightweight",
+      "applications": [
+        "Suit jackets",
+        "Coats",
+        "Formal wear"
+      ],
+      "properties": [
+        "Silk-like feel",
+        "Breathable",
+        "Anti-static",
+        "Moisture-absorbing"
+      ],
+      "pros": [
+        "Eco-friendly",
+        "Comfortable",
+        "Good drape"
+      ],
+      "cons": [
+        "Can wrinkle",
+        "Moderate durability"
+      ]
+    },
+    {
+      "name": "Acetate Lining",
+      "material": "Semi-synthetic",
+      "weight": "Lightweight to Medium",
+      "applications": [
+        "Coats",
+        "Jackets",
+        "Formal wear"
+      ],
+      "properties": [
+        "Smooth",
+        "Lustrous",
+        "Good drape",
+        "Color-fast"
+      ],
+      "pros": [
+        "Affordable",
+        "Good appearance",
+        "Easy care"
+      ],
+      "cons": [
+        "Heat sensitive",
+        "Can pill",
+        "Not very breathable"
+      ]
+    },
+    {
+      "name": "Polyester Lining",
+      "material": "100% Polyester",
+      "weight": "Lightweight to Medium",
+      "applications": [
+        "Casual wear",
+        "Outerwear",
+        "Work clothing"
+      ],
+      "properties": [
+        "Durable",
+        "Wrinkle-resistant",
+        "Easy care",
+        "Quick-drying"
+      ],
+      "pros": [
+        "Very affordable",
+        "Low maintenance",
+        "Durable"
+      ],
+      "cons": [
+        "Not breathable",
+        "Can be uncomfortable",
+        "Static prone"
+      ]
+    },
+    {
+      "name": "Cotton Batiste",
+      "material": "100% Cotton",
+      "weight": "Lightweight",
+      "applications": [
+        "Summer garments",
+        "Children's clothing",
+        "Casual wear"
+      ],
+      "properties": [
+        "Breathable",
+        "Soft",
+        "Natural",
+        "Absorbent"
+      ],
+      "pros": [
+        "Comfortable",
+        "Natural",
+        "Breathable"
+      ],
+      "cons": [
+        "Wrinkles easily",
+        "Can shrink",
+        "Less smooth than synthetics"
+      ]
+    }
+  ],
+  "construction_methods": [
+    {
+      "method": "Woven",
+      "description": "Fabric created by interlacing warp and weft threads at right angles",
+      "characteristics": [
+        "Stable",
+        "Strong",
+        "Minimal stretch",
+        "Frays when cut"
+      ],
+      "types": [
+        "Plain weave",
+        "Twill weave",
+        "Satin weave"
+      ],
+      "applications": [
+        "Shirts",
+        "Pants",
+        "Suits",
+        "Formal wear"
+      ]
+    },
+    {
+      "method": "Knitted",
+      "description": "Fabric created by interlocking loops of yarn",
+      "characteristics": [
+        "Stretchy",
+        "Flexible",
+        "Comfortable",
+        "Can unravel"
+      ],
+      "types": [
+        "Single jersey",
+        "Rib knit",
+        "Interlock",
+        "Fleece"
+      ],
+      "applications": [
+        "T-shirts",
+        "Sweaters",
+        "Activewear",
+        "Underwear"
+      ]
+    }
+  ],
+  "fabric_care": {
+    "natural_fibers": {
+      "washing": "Usually machine washable, but check care labels",
+      "drying": "Air dry recommended for delicate items",
+      "ironing": "Usually can be ironed at appropriate temperatures",
+      "storage": "Store in breathable containers, protect from moths"
+    },
+    "synthetic_fibers": {
+      "washing": "Generally machine washable and durable",
+      "drying": "Can usually be machine dried",
+      "ironing": "Use low heat settings to avoid melting",
+      "storage": "Store away from heat sources"
+    }
+  }
+}
