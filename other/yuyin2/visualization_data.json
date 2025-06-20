@@ -1,0 +1,447 @@
+{
+  "overview": {
+    "total_products": 14,
+    "domestic_vendors": 6,
+    "international_vendors": 8,
+    "cloud_services": 13,
+    "hybrid_deployment": 4
+  },
+  "products_detail": [
+    {
+      "name": "百度智能云",
+      "company": "百度",
+      "type": "云服务/混合部署",
+      "users": "企业级用户",
+      "accuracy": "98%",
+      "customization_level": 5,
+      "legal_involvement": "中等",
+      "implementation_weeks": "4-8周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "3-10元/小时",
+      "hardware_requirement": "高配置(私有化)",
+      "languages": "中文+多语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "模型定制",
+        "私有化部署"
+      ]
+    },
+    {
+      "name": "阿里云智能语音",
+      "company": "阿里巴巴",
+      "type": "云服务/混合部署",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 3,
+      "legal_involvement": "中等",
+      "implementation_weeks": "4-8周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "0.45-3元/小时",
+      "hardware_requirement": "高配置(私有化)",
+      "languages": "50+语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "SAN-M模型",
+        "多语言"
+      ]
+    },
+    {
+      "name": "腾讯云语音识别",
+      "company": "腾讯",
+      "type": "云服务",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 3,
+      "legal_involvement": "中等",
+      "implementation_weeks": "2-4周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "3-5元/小时",
+      "hardware_requirement": "无",
+      "languages": "中文+多语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "情绪分析",
+        "热词增强"
+      ]
+    },
+    {
+      "name": "华为云语音识别",
+      "company": "华为",
+      "type": "云服务",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 4,
+      "legal_involvement": "中等",
+      "implementation_weeks": "2-4周",
+      "company_scale": "大型",
+      "extensibility": "中等",
+      "price_range": "按量计费",
+      "hardware_requirement": "无",
+      "languages": "中文+多语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "行业定制",
+        "API集成"
+      ]
+    },
+    {
+      "name": "讯飞听见",
+      "company": "科大讯飞",
+      "type": "云服务/本地部署",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 4,
+      "legal_involvement": "高",
+      "implementation_weeks": "4-8周",
+      "company_scale": "大型",
+      "extensibility": "中等",
+      "price_range": "按量计费",
+      "hardware_requirement": "中等配置",
+      "languages": "中文+方言",
+      "features": [
+        "会议转写",
+        "质检分析",
+        "说话人分离",
+        "行业词汇"
+      ]
+    },
+    {
+      "name": "Google Cloud Speech",
+      "company": "Google",
+      "type": "云服务",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 3,
+      "legal_involvement": "高",
+      "implementation_weeks": "2-4周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "0.10-0.16元/小时",
+      "hardware_requirement": "无",
+      "languages": "125+语言",
+      "features": [
+        "实时识别",
+        "Chirp模型",
+        "多语言",
+        "热词增强"
+      ]
+    },
+    {
+      "name": "Microsoft Azure Speech",
+      "company": "Microsoft",
+      "type": "云服务",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 5,
+      "legal_involvement": "高",
+      "implementation_weeks": "2-4周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "按量计费",
+      "hardware_requirement": "无",
+      "languages": "100+语言",
+      "features": [
+        "实时识别",
+        "自定义语音",
+        "企业安全",
+        "模型定制"
+      ]
+    },
+    {
+      "name": "Amazon Transcribe",
+      "company": "Amazon",
+      "type": "云服务",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 3,
+      "legal_involvement": "高",
+      "implementation_weeks": "2-4周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "按量计费",
+      "hardware_requirement": "无",
+      "languages": "多语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "AWS生态",
+        "热词增强"
+      ]
+    },
+    {
+      "name": "IBM Watson Speech",
+      "company": "IBM",
+      "type": "云服务/本地部署",
+      "users": "企业级用户",
+      "accuracy": "95%+",
+      "customization_level": 4,
+      "legal_involvement": "高",
+      "implementation_weeks": "4-8周",
+      "company_scale": "大型",
+      "extensibility": "强",
+      "price_range": "按量计费",
+      "hardware_requirement": "中等配置",
+      "languages": "多语言",
+      "features": [
+        "实时识别",
+        "企业级API",
+        "行业定制",
+        "本地部署"
+      ]
+    },
+    {
+      "name": "Otter.ai",
+      "company": "Otter.ai",
+      "type": "云服务",
+      "users": "个人/企业用户",
+      "accuracy": "90%+",
+      "customization_level": 2,
+      "legal_involvement": "低",
+      "implementation_weeks": "1-2周",
+      "company_scale": "中型",
+      "extensibility": "中等",
+      "price_range": "200-3600元/年",
+      "hardware_requirement": "无",
+      "languages": "英文为主",
+      "features": [
+        "实时转写",
+        "会议记录",
+        "协作功能",
+        "移动应用"
+      ]
+    },
+    {
+      "name": "Rev.ai",
+      "company": "Rev.ai",
+      "type": "云服务",
+      "users": "企业用户",
+      "accuracy": "90%+",
+      "customization_level": 1,
+      "legal_involvement": "低",
+      "implementation_weeks": "1-2周",
+      "company_scale": "中型",
+      "extensibility": "弱",
+      "price_range": "15-120元/小时",
+      "hardware_requirement": "无",
+      "languages": "多语言",
+      "features": [
+        "实时识别",
+        "批量转写",
+        "API接口",
+        "高精度"
+      ]
+    },
+    {
+      "name": "Dragon Professional",
+      "company": "Nuance",
+      "type": "桌面软件",
+      "users": "专业用户",
+      "accuracy": "99%+",
+      "customization_level": 1,
+      "legal_involvement": "高",
+      "implementation_weeks": "1-2周",
+      "company_scale": "大型",
+      "extensibility": "弱",
+      "price_range": "699元(终身)",
+      "hardware_requirement": "低配置",
+      "languages": "多语言",
+      "features": [
+        "语音输入",
+        "命令控制",
+        "专业词汇",
+        "离线使用"
+      ]
+    },
+    {
+      "name": "Sonix",
+      "company": "Sonix",
+      "type": "云服务",
+      "users": "媒体/企业用户",
+      "accuracy": "90%+",
+      "customization_level": 4,
+      "legal_involvement": "高",
+      "implementation_weeks": "1-2周",
+      "company_scale": "中型",
+      "extensibility": "中等",
+      "price_range": "60-120元/小时",
+      "hardware_requirement": "无",
+      "languages": "40+语言",
+      "features": [
+        "批量转写",
+        "多媒体支持",
+        "编辑工具",
+        "SOC2合规"
+      ]
+    },
+    {
+      "name": "网易见外",
+      "company": "网易",
+      "type": "云服务",
+      "users": "个人用户",
+      "accuracy": "85%+",
+      "customization_level": 1,
+      "legal_involvement": "低",
+      "implementation_weeks": "1-2周",
+      "company_scale": "大型",
+      "extensibility": "弱",
+      "price_range": "免费(2小时/天)",
+      "hardware_requirement": "无",
+      "languages": "中文+多语言",
+      "features": [
+        "免费使用",
+        "视频字幕",
+        "文档翻译",
+        "简单易用"
+      ]
+    }
+  ],
+  "market_analysis": {
+    "vendor_distribution": {
+      "国内厂商": 6,
+      "国际厂商": 8
+    },
+    "deployment_types": {
+      "云服务": 9,
+      "云服务/混合部署": 2,
+      "云服务/本地部署": 2,
+      "桌面软件": 1
+    },
+    "company_scales": {
+      "大型": 11,
+      "中型": 3
+    },
+    "price_categories": {
+      "按量计费": 5,
+      "中等成本(3-10元)": 3,
+      "低成本(1元以下)": 2,
+      "年费制": 1,
+      "一次性购买": 1,
+      "高成本(15元以上)": 1,
+      "免费": 1
+    }
+  },
+  "feature_analysis": {
+    "all_features": [
+      "Chirp模型",
+      "简单易用",
+      "行业定制",
+      "SAN-M模型",
+      "API集成",
+      "命令控制",
+      "企业级API",
+      "协作功能",
+      "多语言",
+      "实时识别",
+      "语音输入",
+      "批量转写",
+      "SOC2合规",
+      "行业词汇",
+      "视频字幕",
+      "会议转写",
+      "私有化部署",
+      "热词增强",
+      "质检分析",
+      "编辑工具",
+      "专业词汇",
+      "API接口",
+      "自定义语音",
+      "离线使用",
+      "免费使用",
+      "移动应用",
+      "会议记录",
+      "实时转写",
+      "多媒体支持",
+      "本地部署",
+      "文档翻译",
+      "说话人分离",
+      "高精度",
+      "AWS生态",
+      "情绪分析",
+      "企业安全",
+      "模型定制"
+    ],
+    "feature_count": 37,
+    "products_with_realtime": 9,
+    "products_with_batch": 7,
+    "products_with_multilang": 8
+  },
+  "customization_analysis": {
+    "high_customization": [
+      "百度智能云",
+      "华为云语音识别",
+      "讯飞听见",
+      "Microsoft Azure Speech",
+      "IBM Watson Speech",
+      "Sonix"
+    ],
+    "medium_customization": [
+      "阿里云智能语音",
+      "腾讯云语音识别",
+      "Google Cloud Speech",
+      "Amazon Transcribe"
+    ],
+    "low_customization": [
+      "Otter.ai",
+      "Rev.ai",
+      "Dragon Professional",
+      "网易见外"
+    ],
+    "distribution": {
+      "高定制化(4-5分)": 6,
+      "中等定制化(3分)": 4,
+      "低定制化(1-2分)": 4
+    }
+  },
+  "implementation_analysis": {
+    "quick_deployment": [
+      "Otter.ai",
+      "Rev.ai",
+      "Dragon Professional",
+      "Sonix",
+      "网易见外"
+    ],
+    "standard_deployment": [
+      "腾讯云语音识别",
+      "华为云语音识别",
+      "Google Cloud Speech",
+      "Microsoft Azure Speech",
+      "Amazon Transcribe"
+    ],
+    "complex_deployment": [
+      "百度智能云",
+      "阿里云智能语音",
+      "讯飞听见",
+      "IBM Watson Speech"
+    ],
+    "distribution": {
+      "快速部署(1-2周)": 5,
+      "标准部署(2-4周)": 5,
+      "复杂部署(4-8周)": 4
+    }
+  },
+  "technology_analysis": {
+    "extensibility_distribution": {
+      "强": 7,
+      "中等": 4,
+      "弱": 3
+    },
+    "hardware_requirements": {
+      "无": 9,
+      "高配置(私有化)": 2,
+      "中等配置": 2,
+      "低配置": 1
+    },
+    "legal_involvement": {
+      "高": 7,
+      "中等": 4,
+      "低": 3
+    }
+  }
+}
