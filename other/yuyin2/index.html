@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音转文字产品市场分析仪表板</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container" style="max-width: 1200px;">
+            <div class="header__content">
+                <div class="header__brand">
+                    <h1 class="header__title">语音转文字产品市场分析仪表板</h1>
+                    <p class="header__subtitle">基于14个主流产品的深度调研</p>
+                </div>
+                <nav class="header__nav">
+                    <button class="nav-btn nav-btn--active" data-tab="overview">概览</button>
+                    <button class="nav-btn" data-tab="products">产品对比</button>
+                    <button class="nav-btn" data-tab="market">市场分析</button>
+                    <button class="nav-btn" data-tab="technology">技术分析</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main">
+        <div class="container" style="max-width: 1200px;">
+            
+            <!-- 概览页面 -->
+            <section id="overview" class="tab-content tab-content--active">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-card__icon">📊</div>
+                        <div class="metric-card__content">
+                            <h3 class="metric-card__value" id="total-products">14</h3>
+                            <p class="metric-card__label">总产品数</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__icon">🏢</div>
+                        <div class="metric-card__content">
+                            <h3 class="metric-card__value" id="domestic-vendors">6</h3>
+                            <p class="metric-card__label">国内厂商</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__icon">🌍</div>
+                        <div class="metric-card__content">
+                            <h3 class="metric-card__value" id="international-vendors">8</h3>
+                            <p class="metric-card__label">国际厂商</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__icon">☁️</div>
+                        <div class="metric-card__content">
+                            <h3 class="metric-card__value" id="cloud-services">13</h3>
+                            <p class="metric-card__label">云服务产品</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>市场份额分布</h3>
+                            <p>国内vs国际厂商</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="vendor-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>部署类型分布</h3>
+                            <p>产品部署方式统计</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="deployment-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container chart-container--wide">
+                        <div class="chart-header">
+                            <h3>定制化能力分布</h3>
+                            <p>产品定制化水平统计</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="customization-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 产品对比页面 -->
+            <section id="products" class="tab-content">
+                <div class="products-header">
+                    <h2>产品对比分析</h2>
+                    <div class="products-filters">
+                        <select id="vendor-filter" class="form-control">
+                            <option value="">所有厂商</option>
+                            <option value="domestic">国内厂商</option>
+                            <option value="international">国际厂商</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="products-table-wrapper">
+                    <table class="products-table" id="products-table">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">产品名称</th>
+                                <th data-sort="company">公司</th>
+                                <th data-sort="type">类型</th>
+                                <th data-sort="accuracy">准确率</th>
+                                <th data-sort="customization_level">定制化</th>
+                                <th data-sort="price_range">价格范围</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 市场分析页面 -->
+            <section id="market" class="tab-content">
+                <h2 class="section-title">市场分析</h2>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>价格分布分析</h3>
+                            <p>不同价格区间产品数量</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="price-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>实施周期分布</h3>
+                            <p>产品部署时间统计</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="implementation-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>公司规模分布</h3>
+                            <p>厂商规模分析</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="company-scale-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>硬件要求分析</h3>
+                            <p>产品硬件需求统计</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="hardware-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技术分析页面 -->
+            <section id="technology" class="tab-content">
+                <h2 class="section-title">技术分析</h2>
+                <div class="charts-grid">
+                    <div class="chart-container chart-container--wide">
+                        <div class="chart-header">
+                            <h3>扩展能力分析</h3>
+                            <p>产品扩展性评估</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="extensibility-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>法律合规要求</h3>
+                            <p>合规级别分布</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="legal-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>语言支持能力</h3>
+                            <p>多语言支持统计</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="language-chart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 产品详情模态框 -->
+    <div id="product-modal" class="modal">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 id="modal-title">产品详情</h3>
+                <button class="modal__close">&times;</button>
+            </div>
+            <div class="modal__body" id="modal-body">
+                <!-- 产品详细信息将在这里动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
