@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缝纫小白熨斗选择指南：无绳 vs 有绳的智慧选择</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">熨斗选择指南</div>
+                <div class="nav-links">
+                    <a href="#intro">引言</a>
+                    <a href="#comparison">对比分析</a>
+                    <a href="#charts">数据可视化</a>
+                    <a href="#recommendation">智能推荐</a>
+                    <a href="#expert">专家建议</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 标题区域 -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">缝纫小白熨斗选择指南</h1>
+                <h2 class="hero-subtitle">无绳 vs 有绳的智慧选择</h2>
+                <p class="hero-description">从独特视角深度解析，助你做出最佳决策</p>
+                <button class="btn btn--primary hero-cta" onclick="scrollToSection('intro')">开始探索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 引言部分 -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">为什么熨斗是缝纫的关键工具？</h2>
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <p>在缝纫的世界里，熨斗不仅仅是一个辅助工具，它是创造完美作品的关键伙伴。无论是熨平缝份、定型褶皱，还是为最终成品增添专业质感，一把合适的熨斗都能让你的缝纫技艺事半功倍。</p>
+                        <p>作为缝纫新手，选择无绳还是有绳熨斗往往让人犯难。本指南将从独特的新手视角出发，通过数据分析、专家建议和实用推荐，帮助你找到最适合的那一把熨斗。</p>
+                    </div>
+                    <div class="intro-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <h3>精准定位</h3>
+                            <p>专为缝纫新手量身定制的选择标准</p>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📊</div>
+                            <h3>数据驱动</h3>
+                            <p>基于真实数据的客观对比分析</p>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🤖</div>
+                            <h3>智能推荐</h3>
+                            <p>个性化推荐系统，匹配你的需求</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心对比部分 -->
+    <section id="comparison" class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">无绳 vs 有绳：核心特点对比</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card cordless-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔋</div>
+                        <h3>无绳熨斗</h3>
+                        <div class="card-badge">便利首选</div>
+                    </div>
+                    <div class="card-body">
+                        <div id="cordless-features" class="feature-list">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-card corded-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔌</div>
+                        <h3>有绳熨斗</h3>
+                        <div class="card-badge">经济之选</div>
+                    </div>
+                    <div class="card-body">
+                        <div id="corded-features" class="feature-list">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据可视化部分 -->
+    <section id="charts" class="charts-section">
+        <div class="container">
+            <h2 class="section-title">数据可视化分析</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>新手需求适配度雷达图</h3>
+                        <p>从五个关键维度评估两种熨斗对新手的适配程度</p>
+                    </div>
+                    <div class="chart-container">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1750689839/pplx_code_interpreter/5c3699c9_mse3lz.jpg" alt="新手需求适配度雷达图" class="chart-image" onclick="openChartModal(this)">
+                    </div>
+                    <div class="chart-insight">
+                        <strong>关键洞察：</strong>无绳熨斗在使用便利性和新手友好度方面表现突出，而有绳熨斗在预算友好性方面占据优势。
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>技术规格详细对比</h3>
+                        <p>从功率、容量、重量等技术参数全面对比</p>
+                    </div>
+                    <div class="chart-container">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1750689887/pplx_code_interpreter/b6ed0a91_vatumr.jpg" alt="技术规格对比图" class="chart-image" onclick="openChartModal(this)">
+                    </div>
+                    <div class="chart-insight">
+                        <strong>关键洞察：</strong>有绳熨斗在功率和蒸汽量方面更强劲，适合重度使用；无绳熨斗更轻便，加热更快。
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>价格区间分布箱线图</h3>
+                        <p>直观展示两种熨斗的价格分布和选择范围</p>
+                    </div>
+                    <div class="chart-container">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1750689982/pplx_code_interpreter/7ed05663_hljbbv.jpg" alt="价格区间分布图" class="chart-image" onclick="openChartModal(this)">
+                    </div>
+                    <div class="chart-insight">
+                        <strong>关键洞察：</strong>有绳熨斗价格区间更广，入门级选择丰富；无绳熨斗价格相对较高，但性价比集中在中高端。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 智能推荐系统 -->
+    <section id="recommendation" class="recommendation-section">
+        <div class="container">
+            <h2 class="section-title">智能推荐系统</h2>
+            <p class="section-subtitle">告诉我们你的情况，我们为你推荐最适合的熨斗类型</p>
+            
+            <div class="recommendation-tool">
+                <div class="question-grid">
+                    <div class="question-card">
+                        <h3>你的预算范围是？</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="budget" value="low">
+                                <span class="option-text">200元以下</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="budget" value="medium">
+                                <span class="option-text">200-500元</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="budget" value="high">
+                                <span class="option-text">500元以上</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h3>使用频率如何？</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="frequency" value="occasional">
+                                <span class="option-text">偶尔使用</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="frequency" value="regular">
+                                <span class="option-text">每周几次</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="frequency" value="daily">
+                                <span class="option-text">几乎每天</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h3>工作空间大小？</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="space" value="small">
+                                <span class="option-text">较小空间</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="space" value="medium">
+                                <span class="option-text">中等空间</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="space" value="large">
+                                <span class="option-text">宽敞空间</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <h3>最看重什么？</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="priority" value="convenience">
+                                <span class="option-text">使用便利</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="priority" value="performance">
+                                <span class="option-text">熨烫效果</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="priority" value="price">
+                                <span class="option-text">价格实惠</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendation-result" id="recommendation-result">
+                    <div class="result-placeholder">
+                        <p>请完成上面的选择，我们将为你推荐最适合的熨斗类型 ✨</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专家建议部分 -->
+    <section id="expert" class="expert-section">
+        <div class="container">
+            <h2 class="section-title">专家购买建议</h2>
+            <div class="expert-content">
+                <div class="expert-tips">
+                    <h3>专业提示</h3>
+                    <div id="expert-tips-list" class="tips-list">
+                        <!-- 动态生成 -->
+                    </div>
+                </div>
+                <div class="product-recommendations">
+                    <h3>产品推荐</h3>
+                    <div class="recommendation-cards">
+                        <div class="rec-card budget-rec">
+                            <h4>💰 预算有限推荐</h4>
+                            <p class="rec-type">有绳熨斗</p>
+                            <p class="rec-reason">预算友好，性价比高</p>
+                            <div class="rec-models">
+                                <span class="model-tag">苏泊尔YD06AC-20</span>
+                                <span class="model-tag">美的蒸汽熨斗</span>
+                            </div>
+                        </div>
+                        <div class="rec-card convenience-rec">
+                            <h4>⚡ 便利性优先推荐</h4>
+                            <p class="rec-type">无绳熨斗</p>
+                            <p class="rec-reason">使用便利，操作简单</p>
+                            <div class="rec-models">
+                                <span class="model-tag">松下NI-WL65</span>
+                                <span class="model-tag">飞利浦GC850</span>
+                            </div>
+                        </div>
+                        <div class="rec-card space-rec">
+                            <h4>🏠 空间受限推荐</h4>
+                            <p class="rec-type">无绳熨斗</p>
+                            <p class="rec-reason">收纳方便，无线束缚</p>
+                            <div class="rec-models">
+                                <span class="model-tag">松下NI-WL30</span>
+                                <span class="model-tag">朗菲无绳蒸汽熨斗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题解答 -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-list" id="faq-list">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 图表模态框 -->
+    <div id="chart-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-chart" src="" alt="图表详情">
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 缝纫小白熨斗选择指南. 助力每一位缝纫爱好者做出明智选择.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
