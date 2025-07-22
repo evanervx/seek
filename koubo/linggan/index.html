@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装设计的灵感从哪里来？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="navbar-brand">时尚灵感</div>
+                <ul class="navbar-menu">
+                    <li><a href="#hero">首页</a></li>
+                    <li><a href="#inspiration">灵感来源</a></li>
+                    <li><a href="#methods">设计方法</a></li>
+                    <li><a href="#process">设计流程</a></li>
+                    <li><a href="#cases">案例展示</a></li>
+                    <li><a href="#tools">实用工具</a></li>
+                    <li><a href="#summary">总结建议</a></li>
+                </ul>
+                <button class="navbar-toggle" id="navbarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">服装设计的灵感从哪里来？</h1>
+            <p class="hero-subtitle">探索创意源泉，掌握设计方法，开启时尚之旅</p>
+            <button class="btn btn--primary btn--lg hero-btn" onclick="scrollToSection('inspiration')">
+                开始探索
+            </button>
+        </div>
+        <div class="hero-visual">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1749783632/pplx_project_search_images/704e31f01752850e7b6a591ba594a790bc0c9026.jpg" alt="时尚灵感拼板" class="hero-image">
+        </div>
+    </section>
+
+    <main>
+        <!-- 灵感来源概览 -->
+        <section id="inspiration" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>十大灵感来源</h2>
+                    <p>服装设计师从这些丰富的源泉中汲取创意灵感</p>
+                </div>
+                
+                <div class="inspiration-chart">
+                    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/0bcb0503883b54d064231efaa76d4689/1250cc2d-38fd-4e47-9d5a-138e9d567ac0/adf8420b.png" alt="灵感来源重要程度与应用频率分析图" class="chart-image">
+                </div>
+
+                <div class="inspiration-grid" id="inspirationGrid">
+                    <!-- 动态生成的灵感来源卡片 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 设计方法详解 -->
+        <section id="methods" class="section section--alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>八种主要设计方法</h2>
+                    <p>掌握这些设计方法，让创意变为现实</p>
+                </div>
+                
+                <div class="methods-chart">
+                    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/0bcb0503883b54d064231efaa76d4689/cac7b7d5-4c5c-4a08-aad8-7ab3a60cd1bc/2a77921d.png" alt="设计方法难度与创新度对比图" class="chart-image">
+                </div>
+
+                <div class="methods-accordion" id="methodsAccordion">
+                    <!-- 动态生成的方法手风琴 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 设计流程可视化 -->
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>服装设计流程</h2>
+                    <p>从灵感到成品的完整设计之旅</p>
+                </div>
+                
+                <div class="process-timeline" id="processTimeline">
+                    <!-- 动态生成的流程时间轴 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 案例展示 -->
+        <section id="cases" class="section section--alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>经典案例展示</h2>
+                    <p>学习大师作品，理解灵感如何转化为经典</p>
+                </div>
+                
+                <div class="cases-gallery">
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1751371503/pplx_project_search_images/54deb2de4fd9e75b40820794d1d75622bade3011.jpg" alt="建筑灵感时装设计">
+                        </div>
+                        <div class="case-content">
+                            <h3>Christian Dior - New Look</h3>
+                            <p><strong>年份：</strong>1947年</p>
+                            <p><strong>灵感来源：</strong>战后女性优雅回归的理念</p>
+                            <p><strong>影响：</strong>重新定义了现代女性时装</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1753149206/pplx_project_search_images/6eafd4838f6c7c3991f89b24aaf96f3db5d85030.jpg" alt="前卫艺术时装设计">
+                        </div>
+                        <div class="case-content">
+                            <h3>Alexander McQueen - Savage Beauty</h3>
+                            <p><strong>年份：</strong>1999年</p>
+                            <p><strong>灵感来源：</strong>野生动物和自然形态</p>
+                            <p><strong>影响：</strong>将自然元素戏剧化地融入时装</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1753149206/pplx_project_search_images/e96d6547c4403a150e9421637b955fe84f5f70ba.jpg" alt="文化融合时装设计">
+                        </div>
+                        <div class="case-content">
+                            <h3>Yves Saint Laurent - 蒙德里安系列</h3>
+                            <p><strong>年份：</strong>1965年</p>
+                            <p><strong>灵感来源：</strong>荷兰画家蒙德里安的几何抽象作品</p>
+                            <p><strong>影响：</strong>开创了艺术与时装结合的经典范例</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实用工具 -->
+        <section id="tools" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>实用工具推荐</h2>
+                    <p>提升设计效率的实用工具和资源</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🎨</div>
+                        <h3>灵感收集工具</h3>
+                        <ul>
+                            <li>Pinterest - 视觉灵感收集</li>
+                            <li>Behance - 设计作品展示</li>
+                            <li>Instagram - 时尚趋势追踪</li>
+                            <li>Mood Board 应用</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🌈</div>
+                        <h3>色彩搭配工具</h3>
+                        <div class="color-palette">
+                            <div class="color-item">
+                                <div class="color-swatch" style="background: #1FB8CD;"></div>
+                                <span>主色调</span>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-swatch" style="background: #FFC185;"></div>
+                                <span>辅助色</span>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-swatch" style="background: #B4413C;"></div>
+                                <span>点缀色</span>
+                            </div>
+                        </div>
+                        <p>Adobe Color、Coolors、Pantone Color Finder</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📚</div>
+                        <h3>学习资源</h3>
+                        <ul>
+                            <li>Coursera 时装设计课程</li>
+                            <li>Vogue Business 行业分析</li>
+                            <li>Fashion History Timeline</li>
+                            <li>设计师访谈视频</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">✏️</div>
+                        <h3>设计软件</h3>
+                        <ul>
+                            <li>Adobe Illustrator - 矢量设计</li>
+                            <li>Photoshop - 图像处理</li>
+                            <li>CLO 3D - 3D服装设计</li>
+                            <li>Sketch - UI/图形设计</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结与建议 -->
+        <section id="summary" class="section section--alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>总结与建议</h2>
+                    <p>开启您的服装设计之旅</p>
+                </div>
+                
+                <div class="summary-content">
+                    <div class="summary-card">
+                        <h3>关键要点</h3>
+                        <ul>
+                            <li><strong>多元化灵感来源：</strong>从自然、文化、艺术、科技等多个维度寻找创意</li>
+                            <li><strong>系统化设计方法：</strong>掌握8种核心设计方法，提升创作效率</li>
+                            <li><strong>完整设计流程：</strong>从灵感收集到产品上市的全流程管理</li>
+                            <li><strong>持续学习态度：</strong>关注时尚趋势，不断提升设计技能</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <h3>给初学者的建议</h3>
+                        <div class="tips-list">
+                            <div class="tip-item">
+                                <div class="tip-number">1</div>
+                                <div class="tip-content">
+                                    <h4>培养观察力</h4>
+                                    <p>每天花时间观察周围的事物，记录有趣的色彩、形状、纹理</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-number">2</div>
+                                <div class="tip-content">
+                                    <h4>建立灵感库</h4>
+                                    <p>使用数字工具或实体笔记本收集和整理各类灵感素材</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-number">3</div>
+                                <div class="tip-content">
+                                    <h4>动手实践</h4>
+                                    <p>从简单的草图开始，逐步尝试不同的设计方法和技巧</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-number">4</div>
+                                <div class="tip-content">
+                                    <h4>学习经典</h4>
+                                    <p>研究时装史上的经典作品，理解其设计理念和创新之处</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h3>开始您的设计之旅</h3>
+                    <p>灵感无处不在，关键在于发现和运用。让我们一起探索时尚设计的无限可能！</p>
+                    <button class="btn btn--primary btn--lg" onclick="scrollToSection('hero')">
+                        重新开始探索
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 服装设计灵感指南. 探索创意，成就时尚梦想.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
