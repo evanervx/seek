@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装设计三大核心要素</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>服装设计核心要素</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-section="home">首页</a></li>
+                <li><a href="#elements" data-section="elements">核心要素</a></li>
+                <li><a href="#relationship" data-section="relationship">要素关系</a></li>
+                <li><a href="#principles" data-section="principles">形式美法则</a></li>
+                <li><a href="#process" data-section="process">设计流程</a></li>
+                <li><a href="#trends" data-section="trends">流行趋势</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">服装设计三大核心要素</h1>
+                <p class="hero-subtitle">探索款式造型、色彩与面料材料的完美融合</p>
+                <div class="hero-cards">
+                    <div class="hero-card" data-target="elements">
+                        <div class="card-icon">👗</div>
+                        <h3>核心要素</h3>
+                        <p>深入了解服装设计的基础构成</p>
+                    </div>
+                    <div class="hero-card" data-target="relationship">
+                        <div class="card-icon">🔗</div>
+                        <h3>要素关系</h3>
+                        <p>探索三要素之间的相互关系</p>
+                    </div>
+                    <div class="hero-card" data-target="trends">
+                        <div class="card-icon">✨</div>
+                        <h3>流行趋势</h3>
+                        <p>了解2024年最新时尚动向</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心要素部分 -->
+    <section id="elements" class="section">
+        <div class="container">
+            <h2 class="section-title">服装设计三大核心要素</h2>
+            <div class="elements-grid">
+                <div class="element-card" data-element="style">
+                    <div class="element-header">
+                        <div class="element-icon">🎨</div>
+                        <h3>款式造型</h3>
+                        <div class="element-badge">第一要素</div>
+                    </div>
+                    <div class="element-content">
+                        <p>服装的外部轮廓造型和部件细节造型，是设计变化的基础</p>
+                        <button class="btn btn--outline element-btn">详细了解</button>
+                    </div>
+                </div>
+                
+                <div class="element-card" data-element="color">
+                    <div class="element-header">
+                        <div class="element-icon">🌈</div>
+                        <h3>色彩</h3>
+                        <div class="element-badge">视觉焦点</div>
+                    </div>
+                    <div class="element-content">
+                        <p>服装中给人以强烈感觉的视觉要素，是设计中最醒目的部分</p>
+                        <button class="btn btn--outline element-btn">详细了解</button>
+                    </div>
+                </div>
+                
+                <div class="element-card" data-element="material">
+                    <div class="element-header">
+                        <div class="element-icon">🧵</div>
+                        <h3>面料材料</h3>
+                        <div class="element-badge">物质基础</div>
+                    </div>
+                    <div class="element-content">
+                        <p>服装的物质载体，是赖以体现设计思想的物质基础</p>
+                        <button class="btn btn--outline element-btn">详细了解</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 要素关系部分 -->
+    <section id="relationship" class="section bg-gradient">
+        <div class="container">
+            <h2 class="section-title">三要素关系图</h2>
+            <div class="relationship-container">
+                <div class="relationship-diagram">
+                    <div class="center-node">
+                        <div class="node-content">
+                            <h3>服装设计</h3>
+                            <p>整体美感</p>
+                        </div>
+                    </div>
+                    <div class="outer-nodes">
+                        <div class="outer-node" id="style-node">
+                            <div class="node-icon">🎨</div>
+                            <h4>款式造型</h4>
+                        </div>
+                        <div class="outer-node" id="color-node">
+                            <div class="node-icon">🌈</div>
+                            <h4>色彩</h4>
+                        </div>
+                        <div class="outer-node" id="material-node">
+                            <div class="node-icon">🧵</div>
+                            <h4>面料材料</h4>
+                        </div>
+                    </div>
+                    <svg class="connection-lines" viewBox="0 0 400 400">
+                        <line x1="200" y1="200" x2="200" y2="80" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="200" x2="320" y2="280" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="200" x2="80" y2="280" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="80" x2="320" y2="280" stroke="var(--color-secondary)" stroke-width="1" opacity="0.4"/>
+                        <line x1="200" y1="80" x2="80" y2="280" stroke="var(--color-secondary)" stroke-width="1" opacity="0.4"/>
+                        <line x1="320" y1="280" x2="80" y2="280" stroke="var(--color-secondary)" stroke-width="1" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div class="relationship-info">
+                    <div class="info-card active" data-relationship="default">
+                        <h3>相互关系</h3>
+                        <ul>
+                            <li><strong>相互制约：</strong>任何一个方面出了差错，便有可能导致整件衣服的失败</li>
+                            <li><strong>相辅相成：</strong>三者必须协调配合，共同创造服装的整体美</li>
+                            <li><strong>动态平衡：</strong>根据服装类型，三要素的重要性会有所变化</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 形式美法则部分 -->
+    <section id="principles" class="section">
+        <div class="container">
+            <h2 class="section-title">形式美法则</h2>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-number">1</div>
+                    <h3>比例</h3>
+                    <p>服装各部分尺寸之间的对比关系</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">2</div>
+                    <h3>平衡</h3>
+                    <p>对称式平衡和非对称性平衡两种形式</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">3</div>
+                    <h3>节奏</h3>
+                    <p>运用造型要素的变化形成节奏感</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">4</div>
+                    <h3>对比</h3>
+                    <p>两个性质相反的元素组合产生强烈视觉反差</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">5</div>
+                    <h3>统一</h3>
+                    <p>变化与统一是构成服装形式美最基本、最重要的法则</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设计流程部分 -->
+    <section id="process" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">服装设计流程</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>设计阶段</h3>
+                        <p>确定设计主题和风格，创意构思和草图绘制，材料选择和样品制作</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>打版和裁剪阶段</h3>
+                        <p>打板，布料裁剪</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>缝制和质量控制阶段</h3>
+                        <p>缝制工艺，试衣和修改，质量控制</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>后整理阶段</h3>
+                        <p>配饰安装，整烫和包装</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>市场销售和售后服务阶段</h3>
+                        <p>销售推广，售后服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 流行趋势部分 -->
+    <section id="trends" class="section">
+        <div class="container">
+            <h2 class="section-title">2024年流行趋势</h2>
+            <div class="trends-grid">
+                <div class="trend-card">
+                    <div class="trend-icon">🏠</div>
+                    <h3>舒适与功能性</h3>
+                    <p>宽松、舒适的服装设计成为主流</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">🌱</div>
+                    <h3>可持续时尚</h3>
+                    <p>环保材料和生产过程受到重视</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">📼</div>
+                    <h3>复古风潮</h3>
+                    <p>90年代时尚元素强势回归</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">⚓</div>
+                    <h3>海洋风格</h3>
+                    <p>横条纹、水手领、航海风元素</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">🌸</div>
+                    <h3>浪漫元素</h3>
+                    <p>花卉、流苏、蝴蝶结等装饰</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">⚖️</div>
+                    <h3>强烈对比</h3>
+                    <p>精致与休闲的混合搭配</p>
+                </div>
+                <div class="trend-card">
+                    <div class="trend-icon">👖</div>
+                    <h3>精致牛仔布</h3>
+                    <p>牛仔布在高级时装中的创新应用</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详情弹窗 -->
+    <div id="element-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- 内容将通过JavaScript动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
