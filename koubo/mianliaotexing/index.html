@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面料物理特性与服装轮廓设计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 标题区域 -->
+        <header class="header">
+            <h1 class="header__title">面料物理特性与服装轮廓设计</h1>
+            <p class="header__subtitle">探索面料如何决定服装的美学表现</p>
+        </header>
 
+        <!-- 第一部分：核心概念介绍 -->
+        <section class="core-concepts">
+            <h2 class="section-title">核心物理特性</h2>
+            <div class="concept-cards">
+                <div class="concept-card concept-card--drape">
+                    <div class="concept-card__icon">💧</div>
+                    <h3 class="concept-card__title">悬垂性</h3>
+                    <p class="concept-card__description">面料在重力作用下自然下垂的能力，决定服装的流动感和优雅程度</p>
+                </div>
+                <div class="concept-card concept-card--elasticity">
+                    <div class="concept-card__icon">🔄</div>
+                    <h3 class="concept-card__title">弹性</h3>
+                    <p class="concept-card__description">面料拉伸后恢复原状的能力，影响服装的贴身性和舒适度</p>
+                </div>
+                <div class="concept-card concept-card--stiffness">
+                    <div class="concept-card__icon">📐</div>
+                    <h3 class="concept-card__title">刚性</h3>
+                    <p class="concept-card__description">面料保持形状的能力，决定服装的挺括程度和结构感</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：交互式面料选择器 -->
+        <section class="fabric-selector">
+            <h2 class="section-title">面料特性分析</h2>
+            <div class="selector-container">
+                <div class="fabric-select">
+                    <label for="fabricSelect" class="form-label">选择面料</label>
+                    <select id="fabricSelect" class="form-control">
+                        <option value="">请选择面料...</option>
+                        <option value="丝绸">丝绸</option>
+                        <option value="雪纺">雪纺</option>
+                        <option value="欧根纱">欧根纱</option>
+                        <option value="棉质">棉质</option>
+                        <option value="亚麻">亚麻</option>
+                        <option value="毛呢">毛呢</option>
+                        <option value="涤纶">涤纶</option>
+                        <option value="针织">针织</option>
+                        <option value="莱卡">莱卡</option>
+                        <option value="牛仔布">牛仔布</option>
+                        <option value="皮革">皮革</option>
+                        <option value="真丝缎">真丝缎</option>
+                        <option value="纱网">纱网</option>
+                        <option value="厚呢绒">厚呢绒</option>
+                        <option value="薄纱">薄纱</option>
+                    </select>
+                </div>
+                
+                <div id="fabricInfo" class="fabric-info">
+                    <div class="fabric-properties">
+                        <h3>物理特性评分</h3>
+                        <div class="property-bars">
+                            <div class="property-bar">
+                                <span class="property-label">悬垂性</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="drapeBar"></div>
+                                </div>
+                                <span class="property-value" id="drapeValue">0</span>
+                            </div>
+                            <div class="property-bar">
+                                <span class="property-label">弹性</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="elasticityBar"></div>
+                                </div>
+                                <span class="property-value" id="elasticityValue">0</span>
+                            </div>
+                            <div class="property-bar">
+                                <span class="property-label">刚性</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="stiffnessBar"></div>
+                                </div>
+                                <span class="property-value" id="stiffnessValue">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fabric-silhouettes">
+                        <h3>适合的服装廓形</h3>
+                        <div class="silhouette-tags" id="suitableSilhouettes"></div>
+                    </div>
+                    
+                    <div class="fabric-characteristics">
+                        <h3>造型特点</h3>
+                        <p id="fabricCharacteristics">选择面料查看特点...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：服装廓形可视化 -->
+        <section class="silhouette-section">
+            <h2 class="section-title">服装廓形类型</h2>
+            <div class="silhouette-grid">
+                <div class="silhouette-item" data-type="A型">
+                    <div class="silhouette-shape silhouette-a">A</div>
+                    <h3>A型</h3>
+                    <p>上窄下宽</p>
+                </div>
+                <div class="silhouette-item" data-type="H型">
+                    <div class="silhouette-shape silhouette-h">H</div>
+                    <h3>H型</h3>
+                    <p>直筒型</p>
+                </div>
+                <div class="silhouette-item" data-type="X型">
+                    <div class="silhouette-shape silhouette-x">X</div>
+                    <h3>X型</h3>
+                    <p>收腰设计</p>
+                </div>
+                <div class="silhouette-item" data-type="O型">
+                    <div class="silhouette-shape silhouette-o">O</div>
+                    <h3>O型</h3>
+                    <p>宽松圆润</p>
+                </div>
+                <div class="silhouette-item" data-type="T型">
+                    <div class="silhouette-shape silhouette-t">T</div>
+                    <h3>T型</h3>
+                    <p>上宽下窄</p>
+                </div>
+            </div>
+            
+            <div id="silhouetteDetails" class="silhouette-details">
+                <div class="details-content">
+                    <h3 id="detailsTitle">点击上方廓形了解详情</h3>
+                    <p id="detailsDescription">每种廓形都有其独特的特点和适合的面料类型</p>
+                    <div class="suitable-fabrics">
+                        <h4>适合的面料</h4>
+                        <div id="suitableFabrics" class="fabric-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：设计建议 -->
+        <section class="design-suggestions">
+            <h2 class="section-title">设计建议</h2>
+            <div id="designAdvice" class="advice-content">
+                <p>选择一种面料，获取专属的设计建议...</p>
+            </div>
+        </section>
+
+        <!-- 雷达图展示区域 -->
+        <section class="radar-chart-section">
+            <h2 class="section-title">面料特性对比图</h2>
+            <div class="chart-container">
+                <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d98d2a0a4e7130ea99e097a5d0c182e9/59d0ced4-ddb1-4a64-a6c8-b8f921d315d4/b31c76d7.png" alt="面料物理特性对比雷达图" class="radar-chart">
+                <p class="chart-caption">不同面料在悬垂性、弹性、刚性三个维度的物理特性对比</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
