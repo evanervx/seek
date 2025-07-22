@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装设计基础知识入门指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h2>时装设计</h2>
+            </div>
+            <div class="navbar-nav">
+                <a href="#overview" class="nav-link">设计概述</a>
+                <a href="#skills" class="nav-link">核心技能</a>
+                <a href="#learning-path" class="nav-link">学习路径</a>
+                <a href="#design-process" class="nav-link">设计流程</a>
+                <a href="#resources" class="nav-link">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅区域 -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">服装设计基础知识入门指南</h1>
+                <p class="hero-subtitle">探索时尚设计的奥秘，从基础到专业，开启你的设计之路</p>
+                <div class="hero-buttons">
+                    <a href="#skills" class="btn btn--primary btn--lg">开始学习</a>
+                    <a href="#overview" class="btn btn--outline btn--lg">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1753152848/pplx_project_search_images/e1871d99335b642e6070fa7427a5809e828df5fd.jpg" alt="服装设计效果图" class="hero-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- 设计概述板块 -->
+    <section id="overview" class="overview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>什么是服装设计</h2>
+                <p class="section-subtitle">实用性与艺术性完美结合的创意活动</p>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>服装设计是实用性和艺术性相结合的创意活动，涉及款式、面料、色彩三大基本要素。设计师需要通过图纸表达设计构思，并最终将创意转化为实用的服装产品。</p>
+                    <div class="overview-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👗</div>
+                            <div class="highlight-text">
+                                <h4>创意表达</h4>
+                                <p>将想象力转化为可穿戴的艺术作品</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎨</div>
+                            <div class="highlight-text">
+                                <h4>美学追求</h4>
+                                <p>追求视觉美感与功能性的完美平衡</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💼</div>
+                            <div class="highlight-text">
+                                <h4>职业前景</h4>
+                                <p>广阔的就业空间和创业机会</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1753152848/pplx_project_search_images/54bd02fb6b87d749c31f31c897a25411e91a9928.jpg" alt="服装设计手绘教程" class="overview-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技能板块 -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>5大核心技能</h2>
+                <p class="section-subtitle">成为专业服装设计师必备的关键能力</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="drawing">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">手绘技能</h3>
+                    <p class="skill-description">服装设计最基本的表达手段</p>
+                    <button class="btn btn--secondary btn--sm skill-btn">了解详情</button>
+                </div>
+                <div class="skill-card" data-skill="fabric">
+                    <div class="skill-icon">🧵</div>
+                    <h3 class="skill-title">面料知识</h3>
+                    <p class="skill-description">了解各种材质的特性和应用</p>
+                    <button class="btn btn--secondary btn--sm skill-btn">了解详情</button>
+                </div>
+                <div class="skill-card" data-skill="color">
+                    <div class="skill-icon">🌈</div>
+                    <h3 class="skill-title">色彩搭配</h3>
+                    <p class="skill-description">色彩是服装设计的灵魂</p>
+                    <button class="btn btn--secondary btn--sm skill-btn">了解详情</button>
+                </div>
+                <div class="skill-card" data-skill="pattern">
+                    <div class="skill-icon">📐</div>
+                    <h3 class="skill-title">版型工艺</h3>
+                    <p class="skill-description">从设计到成衣的关键技术</p>
+                    <button class="btn btn--secondary btn--sm skill-btn">了解详情</button>
+                </div>
+                <div class="skill-card" data-skill="communication">
+                    <div class="skill-icon">💬</div>
+                    <h3 class="skill-title">沟通协作</h3>
+                    <p class="skill-description">设计师必备的软技能</p>
+                    <button class="btn btn--secondary btn--sm skill-btn">了解详情</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能详情模态框 -->
+    <div id="skill-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-icon"></div>
+                <h3 class="modal-title"></h3>
+                <p class="modal-description"></p>
+                <div class="modal-details"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 学习路径板块 -->
+    <section id="learning-path" class="learning-path-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>学习路径图</h2>
+                <p class="section-subtitle">循序渐进，系统掌握服装设计技能</p>
+            </div>
+            <div class="learning-path">
+                <div class="path-step" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>美术基础</h4>
+                        <p>学习素描、色彩，培养造型能力和审美意识</p>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>服装画技法</h4>
+                        <p>掌握人体比例，学会绘制效果图和款式图</p>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>设计理论</h4>
+                        <p>学习服装设计原理、方法和流行趋势分析</p>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>材料应用</h4>
+                        <p>深入了解面料特性，学习材料搭配和选择</p>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>结构工艺</h4>
+                        <p>学习打版、裁剪、缝制等技术操作</p>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>作品集制作</h4>
+                        <p>整合所学知识，制作专业的设计作品集</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设计流程板块 -->
+    <section id="design-process" class="design-process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>设计流程</h2>
+                <p class="section-subtitle">从灵感到成衣的完整制作过程</p>
+            </div>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="process-icon">💡</div>
+                    <h4>灵感构思</h4>
+                    <p>观察生活，收集灵感，确定设计主题</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">🔍</div>
+                    <h4>调研企划</h4>
+                    <p>市场调研，趋势分析，制定设计方案</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">✏️</div>
+                    <h4>设计绘图</h4>
+                    <p>绘制草图，完善设计，制作效果图</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">🧵</div>
+                    <h4>面料选择</h4>
+                    <p>根据设计需求选择合适的面料和辅料</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">✂️</div>
+                    <h4>打版裁剪</h4>
+                    <p>制作纸样，计算用料，进行面料裁剪</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">👗</div>
+                    <h4>样衣制作</h4>
+                    <p>按照工艺要求缝制样衣，进行试穿调整</p>
+                </div>
+            </div>
+            <div class="process-images">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1753152848/pplx_project_search_images/bfaea17916a2a42048fa553c8140295e2ffa9cbc.jpg" alt="服装工艺流程" class="process-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 实用工具板块 -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>实用工具与资源</h2>
+                <p class="section-subtitle">精选推荐，助力设计学习</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">🎨</div>
+                        <h3>绘图工具</h3>
+                    </div>
+                    <ul class="resource-list">
+                        <li>铅笔(2H-6B)</li>
+                        <li>马克笔</li>
+                        <li>彩色铅笔</li>
+                        <li>水彩颜料</li>
+                        <li>绘图纸</li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">💻</div>
+                        <h3>设计软件</h3>
+                    </div>
+                    <ul class="resource-list">
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>CorelDRAW</li>
+                        <li>Procreate</li>
+                        <li>服装CAD</li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">📚</div>
+                        <h3>学习资源</h3>
+                    </div>
+                    <ul class="resource-list">
+                        <li>时尚杂志</li>
+                        <li>设计师作品集</li>
+                        <li>在线教程</li>
+                        <li>专业书籍</li>
+                        <li>时装周资讯</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="resources-images">
+                <div class="resource-image-item">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1753152848/pplx_project_search_images/1f19bdb95f77867a7f83898a6d6edd79c9ead815.jpg" alt="面料样本册" class="resource-img">
+                    <div class="image-caption">面料样本册 - 材质学习必备</div>
+                </div>
+                <div class="resource-image-item">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1753152849/pplx_project_search_images/bdbafa250dbbe5fd85fb03fdf7f77cf71acbcc87.jpg" alt="手绘设计书籍" class="resource-img">
+                    <div class="image-caption">手绘设计书籍 - 1288例实战案例</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>开启你的时装设计之路</h3>
+                    <p>服装设计不仅是技能的学习，更是对美的追求和创意的表达。希望这份指南能帮助你在设计之路上走得更远。</p>
+                </div>
+                <div class="footer-cta">
+                    <a href="#skills" class="btn btn--primary">立即开始学习</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 服装设计基础知识入门指南. 创意无限，设计有道。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
