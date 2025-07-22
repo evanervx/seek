@@ -1,0 +1,43 @@
+{
+  "title": "服装设计中的点、线、面视觉语言",
+  "subtitle": "探索时尚设计的基础构成元素",
+  "hero_description": "从包豪斯理论到现代实践，深入理解服装设计中最基本却最重要的视觉语言元素",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "理论基础",
+      "icon": "📐",
+      "description": "包豪斯学派奠定的现代设计理论基础"
+    },
+    {
+      "id": "point",
+      "title": "点的语言",
+      "icon": "⚫",
+      "description": "标明位置、吸引视线的视觉焦点元素"
+    },
+    {
+      "id": "line",
+      "title": "线的力量",
+      "icon": "📏",
+      "description": "连贯空间、塑造轮廓的动态元素"
+    },
+    {
+      "id": "surface",
+      "title": "面的艺术",
+      "icon": "🔲",
+      "description": "构建形态、表现质感的基础载体"
+    },
+    {
+      "id": "principles",
+      "title": "设计原则",
+      "icon": "⚖️",
+      "description": "形式美法则与构成方法的综合应用"
+    },
+    {
+      "id": "cases",
+      "title": "实践案例",
+      "icon": "👗",
+      "description": "著名品牌与现代设计中的创新应用"
+    }
+  ]
+}
