@@ -1,0 +1,96 @@
+{
+  "basic_measurements": {
+    "head_circumference": {
+      "name": "头围",
+      "description": "头部前额发根和枕骨下方一圈的周长",
+      "adult_female": "55-60cm",
+      "adult_male": "57-62cm",
+      "child": "50-54cm",
+      "standard": "58cm（中等体型）",
+      "measurement_method": "软尺从额头发根部位量起，通过后头部隆起点以下2cm处绕着头围一周"
+    },
+    "head_height": {
+      "name": "头高",
+      "description": "肩颈点到头顶的垂直距离",
+      "standard": "25cm",
+      "hat_height_basis": "头高+2cm作为帽高基础"
+    },
+    "head_arc_length": {
+      "name": "头弧长",
+      "description": "两耳根过头顶的弧长（横弧长）和前额过头顶中心至后枕点的弧长（纵弧长）",
+      "average": "35cm",
+      "usage": "用于瓜皮帽结构设计的重要参数"
+    }
+  },
+  "hat_components": {
+    "crown": {
+      "name": "帽顶",
+      "description": "帽子的顶部部分",
+      "design_methods": {
+        "multi_piece": "多片帽（2-8片拼接）",
+        "single_piece": "单片帽",
+        "calculation": "头围除以片数确定每片底边长度"
+      }
+    },
+    "band": {
+      "name": "帽身/帽带",
+      "description": "连接帽顶和帽檐的部分",
+      "height": "不低于头围高度",
+      "circumference": "等于头围"
+    },
+    "brim": {
+      "name": "帽檐",
+      "description": "帽子向外延伸的边沿部分",
+      "width_range": "7-10cm（普通遮阳帽）",
+      "duck_bill_style": "鸭舌形帽檐",
+      "design_basis": "以头围为周长作圆，取半圆设计"
+    }
+  },
+  "hat_types": {
+    "baseball_cap": {
+      "name": "棒球帽",
+      "circumference": "56-60cm（可调节）",
+      "brim_width": "7cm",
+      "crown_height": "14cm",
+      "structure": "多片拼接+鸭舌帽檐"
+    },
+    "bucket_hat": {
+      "name": "渔夫帽",
+      "circumference": "54-58cm",
+      "brim_width": "7-9cm",
+      "crown_height": "15-20cm",
+      "structure": "圆形帽顶+圆形帽檐"
+    },
+    "beret": {
+      "name": "贝雷帽",
+      "circumference": "54-58cm",
+      "structure": "6-8片拼接",
+      "feature": "包子形状，可装帽腰或帽檐"
+    },
+    "fedora": {
+      "name": "礼帽",
+      "circumference": "55-62cm",
+      "brim_width": "8-12cm",
+      "structure": "圆柱形帽身+平帽顶+圆形帽檐"
+    }
+  },
+  "size_calculation": {
+    "crown_pieces": {
+      "2_piece": "头围/2 = 每片底边长度",
+      "4_piece": "头围/4 = 每片底边长度（如58cm/4=14.5cm）",
+      "6_piece": "头围/6 = 每片底边长度（如58cm/6=9.67cm）",
+      "8_piece": "头围/8 = 每片底边长度"
+    },
+    "adjustments": {
+      "ease": "加1-2cm松量",
+      "crown_bulge": "三角形底边及腰边中部各加凸量",
+      "brim_design": "帽檐长度=头围半径+帽檐宽度"
+    }
+  },
+  "technical_points": {
+    "measurement_precision": "测量时适度拉紧软尺，以头部不受压迫为准",
+    "pattern_making": "建立系列帽子结构基础纸样",
+    "3d_scanning": "3D扫描数据优于一维测量数据",
+    "fit_factors": "考虑头发生长空间、耳朵空间、发型变化"
+  }
+}

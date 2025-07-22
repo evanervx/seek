@@ -1,1 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帽子制版关键尺寸指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="nav-bar">
+        <div class="container flex items-center justify-between">
+            <h1 class="nav-title">帽子制版关键尺寸指南</h1>
+            <ul class="nav-menu flex gap-16">
+                <li><a href="#overview" class="nav-link">概览</a></li>
+                <li><a href="#measurements" class="nav-link">基础测量</a></li>
+                <li><a href="#structure" class="nav-link">帽子结构</a></li>
+                <li><a href="#types" class="nav-link">帽型分类</a></li>
+                <li><a href="#calculator" class="nav-link">尺寸计算</a></li>
+                <li><a href="#tips" class="nav-link">制版要点</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- 首页概览区域 -->
+    <section id="overview" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">掌握帽子制版的核心尺寸</h2>
+                <p class="hero-description">了解头围、头高、头弧长等关键测量方法，探索帽顶、帽身、帽檐的设计原理，掌握不同帽型的制版技巧</p>
+                <div class="quick-nav-cards">
+                    <div class="quick-card" data-target="measurements">
+                        <div class="card-icon">📏</div>
+                        <h3>基础测量</h3>
+                        <p>学习头围、头高等基本测量方法</p>
+                    </div>
+                    <div class="quick-card" data-target="structure">
+                        <div class="card-icon">🧢</div>
+                        <h3>帽子结构</h3>
+                        <p>了解帽顶、帽身、帽檐三大组件</p>
+                    </div>
+                    <div class="quick-card" data-target="types">
+                        <div class="card-icon">👒</div>
+                        <h3>帽型分类</h3>
+                        <p>对比不同帽型的特点和尺寸</p>
+                    </div>
+                    <div class="quick-card" data-target="calculator">
+                        <div class="card-icon">🔢</div>
+                        <h3>尺寸计算</h3>
+                        <p>使用计算器获取制版数据</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 基础测量模块 -->
+    <section id="measurements" class="content-section">
+        <div class="container">
+            <h2 class="section-title">基础测量方法</h2>
+            <div class="measurement-grid">
+                <div class="card measurement-card">
+                    <div class="card__body">
+                        <h3>头围测量</h3>
+                        <div class="measurement-visual">
+                            <div class="head-diagram">
+                                <div class="head-shape">
+                                    <div class="measurement-line circumference"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="measurement-info">
+                            <p><strong>测量方法：</strong>软尺从额头发根部位量起，通过后头部隆起点以下2cm处绕着头围一周</p>
+                            <div class="size-ranges">
+                                <div class="size-item">
+                                    <span class="size-label">成人女性：</span>
+                                    <span class="size-value">55-60cm</span>
+                                </div>
+                                <div class="size-item">
+                                    <span class="size-label">成人男性：</span>
+                                    <span class="size-value">57-62cm</span>
+                                </div>
+                                <div class="size-item">
+                                    <span class="size-label">儿童：</span>
+                                    <span class="size-value">50-54cm</span>
+                                </div>
+                                <div class="size-item standard">
+                                    <span class="size-label">标准尺寸：</span>
+                                    <span class="size-value">58cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card measurement-card">
+                    <div class="card__body">
+                        <h3>头高测量</h3>
+                        <div class="measurement-visual">
+                            <div class="head-diagram">
+                                <div class="head-shape">
+                                    <div class="measurement-line height"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="measurement-info">
+                            <p><strong>测量方法：</strong>肩颈点到头顶的垂直距离</p>
+                            <div class="size-ranges">
+                                <div class="size-item standard">
+                                    <span class="size-label">标准头高：</span>
+                                    <span class="size-value">25cm</span>
+                                </div>
+                                <div class="size-item">
+                                    <span class="size-label">帽高基础：</span>
+                                    <span class="size-value">头高 + 2cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card measurement-card">
+                    <div class="card__body">
+                        <h3>头弧长测量</h3>
+                        <div class="measurement-visual">
+                            <div class="head-diagram">
+                                <div class="head-shape">
+                                    <div class="measurement-line arc-horizontal"></div>
+                                    <div class="measurement-line arc-vertical"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="measurement-info">
+                            <p><strong>测量方法：</strong>两耳根过头顶的弧长（横弧长）和前额过头顶中心至后枕点的弧长（纵弧长）</p>
+                            <div class="size-ranges">
+                                <div class="size-item standard">
+                                    <span class="size-label">平均弧长：</span>
+                                    <span class="size-value">35cm</span>
+                                </div>
+                                <div class="size-item">
+                                    <span class="size-label">用途：</span>
+                                    <span class="size-value">瓜皮帽结构设计</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="measurement-tool-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>测量工具</h3>
+                        <div class="tool-interface">
+                            <div class="form-group">
+                                <label class="form-label">输入头围 (cm):</label>
+                                <input type="number" id="headCircumference" class="form-control" min="45" max="70" value="58" step="0.5">
+                            </div>
+                            <div class="measurement-result">
+                                <div class="result-item">
+                                    <span class="result-label">头围分类：</span>
+                                    <span id="sizeCategory" class="result-value">标准</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">推荐帽高：</span>
+                                    <span id="recommendedHeight" class="result-value">27cm</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">帽檐半径：</span>
+                                    <span id="brimRadius" class="result-value">9.2cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 帽子结构模块 -->
+    <section id="structure" class="content-section">
+        <div class="container">
+            <h2 class="section-title">帽子结构组件</h2>
+            <div class="structure-overview">
+                <div class="hat-structure-visual">
+                    <div class="hat-diagram">
+                        <div class="hat-crown interactive-part" data-component="crown">
+                            <span class="component-label">帽顶</span>
+                        </div>
+                        <div class="hat-band interactive-part" data-component="band">
+                            <span class="component-label">帽身</span>
+                        </div>
+                        <div class="hat-brim interactive-part" data-component="brim">
+                            <span class="component-label">帽檐</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="component-details">
+                    <div id="crown-details" class="component-info active">
+                        <h3>帽顶 (Crown)</h3>
+                        <p>帽子的顶部部分，决定帽子的基本造型</p>
+                        <div class="design-methods">
+                            <h4>设计方法：</h4>
+                            <ul>
+                                <li><strong>多片帽：</strong>2-8片拼接设计</li>
+                                <li><strong>单片帽：</strong>整片设计</li>
+                                <li><strong>计算公式：</strong>头围 ÷ 片数 = 每片底边长度</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="band-details" class="component-info">
+                        <h3>帽身/帽带 (Band)</h3>
+                        <p>连接帽顶和帽檐的部分，提供贴合感</p>
+                        <div class="design-methods">
+                            <h4>设计要点：</h4>
+                            <ul>
+                                <li><strong>高度：</strong>不低于头围高度</li>
+                                <li><strong>周长：</strong>等于头围尺寸</li>
+                                <li><strong>功能：</strong>确保帽子贴合头部</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="brim-details" class="component-info">
+                        <h3>帽檐 (Brim)</h3>
+                        <p>帽子向外延伸的边沿部分，提供遮阳和装饰功能</p>
+                        <div class="design-methods">
+                            <h4>设计要点：</h4>
+                            <ul>
+                                <li><strong>宽度范围：</strong>7-10cm（普通遮阳帽）</li>
+                                <li><strong>鸭舌形：</strong>前端突出的帽檐设计</li>
+                                <li><strong>设计基础：</strong>以头围为周长作圆，取半圆设计</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 帽型分类模块 -->
+    <section id="types" class="content-section">
+        <div class="container">
+            <h2 class="section-title">帽型分类对比</h2>
+            <div class="hat-types-selector">
+                <div class="type-tabs">
+                    <button class="type-tab active" data-type="baseball_cap">棒球帽</button>
+                    <button class="type-tab" data-type="bucket_hat">渔夫帽</button>
+                    <button class="type-tab" data-type="beret">贝雷帽</button>
+                    <button class="type-tab" data-type="fedora">礼帽</button>
+                </div>
+            </div>
+
+            <div class="hat-type-display">
+                <div id="baseball_cap-info" class="hat-type-info active">
+                    <div class="hat-visual">
+                        <div class="hat-illustration baseball-cap-illustration">
+                            <div class="hat-crown-visual"></div>
+                            <div class="hat-brim-visual baseball-brim"></div>
+                        </div>
+                    </div>
+                    <div class="hat-specs">
+                        <h3>棒球帽</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">头围：</span>
+                                <span class="spec-value">56-60cm（可调节）</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">帽檐宽度：</span>
+                                <span class="spec-value">7cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">帽顶高度：</span>
+                                <span class="spec-value">14cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">结构特点：</span>
+                                <span class="spec-value">多片拼接+鸭舌帽檐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bucket_hat-info" class="hat-type-info">
+                    <div class="hat-visual">
+                        <div class="hat-illustration bucket-hat-illustration">
+                            <div class="hat-crown-visual"></div>
+                            <div class="hat-brim-visual bucket-brim"></div>
+                        </div>
+                    </div>
+                    <div class="hat-specs">
+                        <h3>渔夫帽</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">头围：</span>
+                                <span class="spec-value">54-58cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">帽檐宽度：</span>
+                                <span class="spec-value">7-9cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">帽顶高度：</span>
+                                <span class="spec-value">15-20cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">结构特点：</span>
+                                <span class="spec-value">圆形帽顶+圆形帽檐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="beret-info" class="hat-type-info">
+                    <div class="hat-visual">
+                        <div class="hat-illustration beret-illustration">
+                            <div class="hat-crown-visual"></div>
+                        </div>
+                    </div>
+                    <div class="hat-specs">
+                        <h3>贝雷帽</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">头围：</span>
+                                <span class="spec-value">54-58cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">结构：</span>
+                                <span class="spec-value">6-8片拼接</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">特点：</span>
+                                <span class="spec-value">包子形状，可装帽腰或帽檐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fedora-info" class="hat-type-info">
+                    <div class="hat-visual">
+                        <div class="hat-illustration fedora-illustration">
+                            <div class="hat-crown-visual"></div>
+                            <div class="hat-brim-visual fedora-brim"></div>
+                        </div>
+                    </div>
+                    <div class="hat-specs">
+                        <h3>礼帽</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">头围：</span>
+                                <span class="spec-value">55-62cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">帽檐宽度：</span>
+                                <span class="spec-value">8-12cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">结构：</span>
+                                <span class="spec-value">圆柱形帽身+平帽顶+圆形帽檐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 尺寸计算器 -->
+    <section id="calculator" class="content-section">
+        <div class="container">
+            <h2 class="section-title">尺寸计算器</h2>
+            <div class="calculator-interface">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>帽顶片数计算</h3>
+                        <div class="calculator-inputs">
+                            <div class="form-group">
+                                <label class="form-label">头围 (cm):</label>
+                                <input type="number" id="calcHeadCirc" class="form-control" min="45" max="70" value="58" step="0.5">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">帽顶片数:</label>
+                                <select id="crownPieces" class="form-control">
+                                    <option value="2">2片</option>
+                                    <option value="4" selected>4片</option>
+                                    <option value="6">6片</option>
+                                    <option value="8">8片</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">松量 (cm):</label>
+                                <input type="number" id="ease" class="form-control" min="0" max="5" value="1.5" step="0.5">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">帽檐宽度 (cm):</label>
+                                <input type="number" id="brimWidth" class="form-control" min="3" max="15" value="8" step="0.5">
+                            </div>
+                        </div>
+
+                        <div class="calculation-results">
+                            <h4>计算结果</h4>
+                            <div class="results-grid">
+                                <div class="result-card">
+                                    <div class="result-label">每片底边长度</div>
+                                    <div id="pieceWidth" class="result-value">14.9cm</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="result-label">帽身周长</div>
+                                    <div id="bandCirc" class="result-value">59.5cm</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="result-label">帽檐总直径</div>
+                                    <div id="brimDiameter" class="result-value">34.9cm</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="result-label">帽檐面积</div>
+                                    <div id="brimArea" class="result-value">957cm²</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="design-visualization">
+                            <div class="crown-pattern">
+                                <h5>帽顶片样展示</h5>
+                                <div class="pattern-display">
+                                    <div class="crown-pieces-visual" id="crownPiecesVisual">
+                                        <!-- 动态生成的片样 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制版要点模块 -->
+    <section id="tips" class="content-section">
+        <div class="container">
+            <h2 class="section-title">制版技术要点</h2>
+            <div class="tips-grid">
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">📐</div>
+                        <h3>测量精度</h3>
+                        <p>测量时适度拉紧软尺，以头部不受压迫为准。确保测量工具的准确性和一致性。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>使用标准软尺进行测量</li>
+                                <li>保持测量时的头部姿势自然</li>
+                                <li>多次测量取平均值</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">📋</div>
+                        <h3>纸样制作</h3>
+                        <p>建立系列帽子结构基础纸样，为不同尺寸和款式提供标准模板。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>建立标准尺码体系</li>
+                                <li>制作基础纸样库</li>
+                                <li>记录调整参数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">🔬</div>
+                        <h3>3D扫描优势</h3>
+                        <p>3D扫描数据优于一维测量数据，能够获得更全面的头型信息。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>获取完整的头型轮廓</li>
+                                <li>精确的空间尺寸数据</li>
+                                <li>个性化定制基础</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">💡</div>
+                        <h3>贴合因素</h3>
+                        <p>考虑头发生长空间、耳朵空间、发型变化等因素，确保佩戴舒适性。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>预留头发生长空间</li>
+                                <li>考虑耳部舒适度</li>
+                                <li>适应不同发型需求</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">⚙️</div>
+                        <h3>调整技巧</h3>
+                        <p>掌握松量加放、凸量调整等专业技巧，优化帽子的版型效果。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>合理加放松量（1-2cm）</li>
+                                <li>三角形底边及腰边中部加凸量</li>
+                                <li>根据材质调整参数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card tip-card">
+                    <div class="card__body">
+                        <div class="tip-icon">📊</div>
+                        <h3>质量控制</h3>
+                        <p>建立制版质量标准，确保产品的一致性和客户满意度。</p>
+                        <div class="tip-details">
+                            <ul>
+                                <li>制定标准化流程</li>
+                                <li>建立质检体系</li>
+                                <li>收集反馈优化</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="common-issues">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>常见问题与解决方案</h3>
+                        <div class="qa-list">
+                            <div class="qa-item">
+                                <h4>Q: 帽子太紧或太松怎么调整？</h4>
+                                <p>A: 通过调整松量和帽身周长来解决。太紧时增加1-2cm松量，太松时相应减少。注意不同材质的弹性差异。</p>
+                            </div>
+                            <div class="qa-item">
+                                <h4>Q: 帽顶形状不理想如何改善？</h4>
+                                <p>A: 调整帽顶片数和每片的弧度。增加片数可以让帽顶更圆润，减少片数则让帽顶更有棱角感。</p>
+                            </div>
+                            <div class="qa-item">
+                                <h4>Q: 帽檐下垂或上翘问题？</h4>
+                                <p>A: 调整帽檐的剪裁角度和加固方式。使用衬布或铁丝加固可以保持帽檐形状稳定。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 帽子制版关键尺寸指南. 专业制版知识分享平台.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
