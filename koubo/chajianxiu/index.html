@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插肩袖肩点外移1.5厘米的原理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>插肩袖肩点外移1.5厘米的原理</h1>
+            <p class="subtitle">服装制版技术要点解析</p>
+        </div>
+    </header>
 
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="explanation-section">
+                    <h2>技术原理</h2>
+                    <p>在制作插肩袖版型时，将肩点向外移1.5厘米是一个重要的技术要点，主要基于以下三个原理：</p>
+                    
+                    <div class="principle-item">
+                        <h3>1. 定位袖山顶点</h3>
+                        <p>在前肩端点向外平移1.5-2厘米可以确定袖山顶点Q，从而保证插肩线角度与袖山高匹配。这一步骤确保了袖山的正确定位，是插肩袖版型成功的关键基础。</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <h3>2. 预留肩部活动量</h3>
+                        <p>肩线延长1.5厘米可为肩部增加余量，使成衣在抬臂和前伸动作时更舒适。这种设计考虑了人体在日常活动中的肩部运动幅度，提供充足的活动空间。</p>
+                    </div>
+
+                    <div class="principle-item">
+                        <h3>3. 衔接袖山弧长</h3>
+                        <p>外移后，前后袖山斜线长度差与袖窿弧长匹配，保证缝合顺畅且避免拉扯。这确保了袖子与衣身的完美贴合，避免了制作过程中的技术问题。</p>
+                    </div>
+                </div>
+
+                <div class="diagram-section">
+                    <h3>结构示意图</h3>
+                    <div class="svg-container">
+                        <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 躯干轮廓 -->
+                            <path d="M50 100 Q50 80 70 80 L230 80 Q250 80 250 100 L250 300 Q250 320 230 320 L70 320 Q50 320 50 300 Z" 
+                                  fill="none" stroke="#2d3a4a" stroke-width="2"/>
+                            
+                            <!-- 原始肩点 -->
+                            <circle cx="70" cy="80" r="4" fill="#e74c3c"/>
+                            <circle cx="230" cy="80" r="4" fill="#e74c3c"/>
+                            
+                            <!-- 外移后的肩点 -->
+                            <circle cx="55" cy="75" r="4" fill="#27ae60"/>
+                            <circle cx="245" cy="75" r="4" fill="#27ae60"/>
+                            
+                            <!-- 插肩线 -->
+                            <line x1="55" y1="75" x2="150" y2="200" stroke="#3498db" stroke-width="2"/>
+                            <line x1="245" y1="75" x2="150" y2="200" stroke="#3498db" stroke-width="2"/>
+                            
+                            <!-- 标注箭头和文字 -->
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                                        refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+                                </marker>
+                            </defs>
+                            
+                            <!-- 左侧标注 -->
+                            <line x1="70" y1="80" x2="55" y2="75" stroke="#666" stroke-width="1" 
+                                  marker-end="url(#arrowhead)"/>
+                            <text x="35" y="70" font-family="var(--font-family-base)" font-size="12" fill="#666">
+                                外移1.5cm
+                            </text>
+                            
+                            <!-- 原始肩点标注 -->
+                            <text x="75" y="75" font-family="var(--font-family-base)" font-size="11" fill="#e74c3c">
+                                原肩点
+                            </text>
+                            
+                            <!-- 新肩点标注 -->
+                            <text x="25" y="95" font-family="var(--font-family-base)" font-size="11" fill="#27ae60">
+                                新肩点
+                            </text>
+                            
+                            <!-- 插肩线标注 -->
+                            <text x="180" y="140" font-family="var(--font-family-base)" font-size="11" fill="#3498db">
+                                插肩线
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sources-section">
+                <h2>技术来源</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="citation-1">
+                            <span>定位袖山顶点原理</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content" id="citation-1">
+                            <p>"在前肩端点向外平移1.5-2公分，为袖山顶点Q..." <cite>[142]</cite></p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="citation-2">
+                            <span>肩部活动量预留</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content" id="citation-2">
+                            <p>"从肩端点将肩线延长1.5cm，是增加肩部的余量。" <cite>[127]</cite></p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="citation-3">
+                            <span>袖山弧长匹配</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content" id="citation-3">
+                            <p>"前后袖山斜线与袖山中线的夹角...外移可保证袖山弧线匹配。" <cite>[142]</cite></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>网页自动生成，供学习参考</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
