@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装色彩搭配实用法则与效果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">🎨 服装色彩搭配实用法则与效果</h1>
+            <nav class="nav">
+                <button class="nav__btn nav__btn--active" data-section="rules">主要法则</button>
+                <button class="nav__btn" data-section="tools">配色工具</button>
+                <button class="nav__btn" data-section="tips">搭配技巧</button>
+                <button class="nav__btn" data-section="psychology">色彩心理学</button>
+            </nav>
+        </div>
+    </header>
 
+    <main class="main">
+        <div class="container">
+            <!-- 搜索栏 -->
+            <div class="search-container">
+                <input type="text" id="searchInput" class="form-control search-input" placeholder="搜索配色法则...">
+            </div>
+
+            <!-- 主要法则部分 -->
+            <section id="rules" class="section section--active">
+                <h2 class="section__title">配色法则</h2>
+                <div class="rules-grid" id="rulesGrid">
+                    <!-- 法则卡片将由JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <!-- 配色工具部分 -->
+            <section id="tools" class="section">
+                <h2 class="section__title">配色工具</h2>
+                <div class="tools-container">
+                    <div class="color-picker-container">
+                        <h3>选择主色调</h3>
+                        <input type="color" id="colorPicker" class="color-picker" value="#4A90E2">
+                        <div class="color-info">
+                            <span id="colorHex">#4A90E2</span>
+                            <span id="colorRgb">RGB(74, 144, 226)</span>
+                        </div>
+                    </div>
+                    <div class="color-schemes">
+                        <h3>推荐配色方案</h3>
+                        <div id="colorSchemes" class="color-schemes-grid">
+                            <!-- 配色方案将由JavaScript生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 搭配技巧部分 -->
+            <section id="tips" class="section">
+                <h2 class="section__title">搭配技巧</h2>
+                <div class="tips-container">
+                    <div class="tips-grid">
+                        <div class="tips-category">
+                            <h3>基础搭配原则</h3>
+                            <ul class="tips-list" id="basicTips">
+                                <!-- 基础技巧将由JavaScript生成 -->
+                            </ul>
+                        </div>
+                        <div class="tips-category">
+                            <h3>季节配色</h3>
+                            <div class="seasonal-colors" id="seasonalColors">
+                                <!-- 季节配色将由JavaScript生成 -->
+                            </div>
+                        </div>
+                        <div class="tips-category">
+                            <h3>场合配色</h3>
+                            <div class="occasion-colors" id="occasionColors">
+                                <!-- 场合配色将由JavaScript生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 色彩心理学部分 -->
+            <section id="psychology" class="section">
+                <h2 class="section__title">色彩心理学</h2>
+                <div class="psychology-container">
+                    <div class="psychology-grid" id="psychologyGrid">
+                        <!-- 色彩心理学内容将由JavaScript生成 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 详情模态框 -->
+    <div id="ruleModal" class="modal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <div class="modal__body">
+                <div class="rule-detail">
+                    <div class="rule-detail__header">
+                        <span class="rule-detail__icon" id="modalIcon"></span>
+                        <h3 class="rule-detail__title" id="modalTitle"></h3>
+                    </div>
+                    <div class="rule-detail__definition" id="modalDefinition"></div>
+                    <div class="rule-detail__effect">
+                        <h4>视觉效果</h4>
+                        <p id="modalEffect"></p>
+                    </div>
+                    <div class="rule-detail__occasions">
+                        <h4>适用场合</h4>
+                        <div class="occasions-list" id="modalOccasions"></div>
+                    </div>
+                    <div class="rule-detail__examples">
+                        <h4>配色示例</h4>
+                        <div class="color-examples" id="modalExamples"></div>
+                    </div>
+                    <div class="rule-detail__tips">
+                        <h4>实用技巧</h4>
+                        <ul id="modalTips"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
