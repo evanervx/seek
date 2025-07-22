@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色彩心理学在服装中的应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">不同色调如何影响服装风格和心理感受</h1>
+                <p class="hero-description">
+                    探索色彩背后的心理密码，了解如何通过服装色彩搭配来表达个性、影响情绪，并在不同场合中展现最佳形象。
+                </p>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <section class="intro-section">
+            <div class="container">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>色彩心理学基础</h2>
+                        <p>色彩不仅仅是视觉的感受，更是情感和心理的表达。研究表明，不同的色彩能够激发不同的情绪反应，影响我们的心理状态和行为表现。在服装搭配中，合理运用色彩心理学原理，可以帮助我们更好地表达个性、增强自信、适应不同场合的需求。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="color-categories-section">
+            <div class="container">
+                <div class="categories-grid">
+                    <!-- 暖色调 -->
+                    <div class="category-card warm-colors">
+                        <div class="category-header">
+                            <h3>暖色调</h3>
+                            <p>充满活力与热情的色彩家族</p>
+                        </div>
+                        <div class="colors-grid">
+                            <div class="color-item" data-color="red" style="background-color: #E53E3E;">
+                                <span class="color-name">红色</span>
+                            </div>
+                            <div class="color-item" data-color="orange" style="background-color: #FF8C00;">
+                                <span class="color-name">橙色</span>
+                            </div>
+                            <div class="color-item" data-color="yellow" style="background-color: #ECC94B;">
+                                <span class="color-name">黄色</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 冷色调 -->
+                    <div class="category-card cool-colors">
+                        <div class="category-header">
+                            <h3>冷色调</h3>
+                            <p>宁静理性的色彩选择</p>
+                        </div>
+                        <div class="colors-grid">
+                            <div class="color-item" data-color="blue" style="background-color: #4299E1;">
+                                <span class="color-name">蓝色</span>
+                            </div>
+                            <div class="color-item" data-color="green" style="background-color: #48BB78;">
+                                <span class="color-name">绿色</span>
+                            </div>
+                            <div class="color-item" data-color="purple" style="background-color: #9F7AEA;">
+                                <span class="color-name">紫色</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 中性色调 -->
+                    <div class="category-card neutral-colors">
+                        <div class="category-header">
+                            <h3>中性色调</h3>
+                            <p>经典永恒的搭配基础</p>
+                        </div>
+                        <div class="colors-grid">
+                            <div class="color-item" data-color="black" style="background-color: #2D3748;">
+                                <span class="color-name">黑色</span>
+                            </div>
+                            <div class="color-item" data-color="white" style="background-color: #FFFFFF; color: #2D3748;">
+                                <span class="color-name">白色</span>
+                            </div>
+                            <div class="color-item" data-color="gray" style="background-color: #718096;">
+                                <span class="color-name">灰色</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 颜色详情模态框 -->
+        <div id="colorModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalColorName">颜色详情</h3>
+                    <button class="modal-close" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="color-detail-grid">
+                        <div class="color-sample" id="modalColorSample"></div>
+                        <div class="color-info">
+                            <div class="info-section">
+                                <h4>情感关键词</h4>
+                                <div id="modalEmotions" class="emotion-tags"></div>
+                            </div>
+                            <div class="info-section">
+                                <h4>性格特征</h4>
+                                <p id="modalPersonality"></p>
+                            </div>
+                            <div class="info-section">
+                                <h4>服装风格建议</h4>
+                                <p id="modalFashionStyle"></p>
+                            </div>
+                            <div class="info-section">
+                                <h4>心理影响</h4>
+                                <p id="modalPsychologicalEffect"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="tips-section">
+            <div class="container">
+                <h2 class="section-title">实用搭配技巧</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>冷暖色调搭配</h4>
+                        <p>冷暖色调的组合能创造视觉冲击力，如蓝色配橙色、绿色配红色，但要注意面积比例，一般采用大面积冷色配小面积暖色点缀的方式。</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>同色系搭配</h4>
+                        <p>使用同一色系的不同深浅进行搭配，如深蓝配浅蓝，能营造和谐统一的视觉效果，同时增加层次感。</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>三色法则</h4>
+                        <p>全身颜色不超过三种，遵循6:3:1的比例原则，主色占60%，辅助色占30%，点缀色占10%。</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>肤色选择指南</h4>
+                        <p>冷肤色适合蓝紫、灰色系；暖肤色适合红黄、橙色系；中性肤色可以尝试更多颜色组合。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-section">
+            <div class="container">
+                <h2 class="section-title">研究发现</h2>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h4>第一印象的重要性</h4>
+                        <p>研究表明，人们在0.7秒内对一个目标产生第一印象，其中颜色的影响占65%。</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>多巴胺穿搭效应</h4>
+                        <p>明亮、饱和度高的色彩能刺激大脑分泌多巴胺，带来愉悦感和满足感。</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>颜色对心理的生理影响</h4>
+                        <p>红色光照射下人的握力比平常增强一倍，蓝色环境中脉搏会减慢，说明颜色确实对人体有生理影响。</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>职场色彩规律</h4>
+                        <p>从低职位到高职位，服装颜色呈现从鲜艳到淡雅的规律，颜色的纯度和明度都会下降。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 色彩心理学与服装搭配指南</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
